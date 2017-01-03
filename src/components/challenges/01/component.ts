@@ -40,7 +40,7 @@ function controller(csvService: ICsvService) {
 
     let xAxis = new TopLinearAxis<any>(plotGroup, plotWidth, plotHeight);
     let yAxis = new LeftCategoricalAxis<any>(plotGroup, plotWidth, plotHeight)
-        .padding(0.5)
+        .padding(0.1)
         .domain(d3.range(1, 51, 1).map(d => d.toString()));
     let seriesGroup = plotGroup.append('g')
         .attr('clip-path', 'url(\'#clip\')')
@@ -64,9 +64,10 @@ function controller(csvService: ICsvService) {
 
         xAxis.domain([0, d3.max(data, d => d.income)]);
 
-        drawSeries(maleTopJobs, 'male', 'blue');
+        drawSeries(maleTopJobs, 'male', 'lightblue');
         drawSeries(femaleTopJobs, 'female', 'pink');
     };
+
     let fmt = d3.format('$')
     function drawSeries(data: Array<any>, classed: string, color: string) {
         var dataBound = seriesGroup.selectAll('.' + classed)
@@ -87,13 +88,20 @@ function controller(csvService: ICsvService) {
                 d3.select(this).select('text')
                     .style('display', 'none');
             });
+        let width = 4;
         enterSelection.append('rect')
+            .attr('x', 1)
             .attr('width', d => xAxis.scale(d.income))
+            .attr('height', yAxis.bandWidth())
+            .style('fill', 'white');
+        enterSelection.append('rect')
+            .attr('x', d => xAxis.scale(d.income) - width / 2)
+            .attr('width', width)
             .attr('height', yAxis.bandWidth());
         enterSelection.append('text')
             .style('font-size', '12px')
-            // .style('display', 'none')
             .style('text-anchor', 'end')
+            .style('display', 'none')
             .attr('x', d => xAxis.scale(d.income) - 5)
             .attr('y', yAxis.bandWidth())
             .text(d => d.occupation + ' - ' + fmt(d.income));
