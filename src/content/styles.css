@@ -1,0 +1,171 @@
+html,body{
+    height: 100%;
+    margin:0;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.container{
+    /*background: blanchedalmond;*/
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.heading{
+    padding: 0 15px;
+    background: #353A47;
+    color:#F7C1BB;
+    flex-grow:1;
+}
+.heading h2, .heading h1{
+    margin: 10px 0;
+}
+.body-container{
+    display: flex;
+    flex-grow: 1;
+    /*background: salmon;*/
+}
+ui-view, :host, .flex-container{
+    display: flex;
+    flex-grow:1;
+}
+#menu{
+    flex-grow: 0; 
+    flex-shrink:0; 
+    flex-basis:250px; 
+}
+.menu{
+    background: #353A47; 
+    color: #F7C1BB;
+}
+.menu-item{
+    padding: 10px 15px 0;
+}
+.menu-item.highlight{
+    border: 1px solid wheat;
+}
+
+.chart-title text{
+    text-anchor: middle;
+    font-size: 1.2em;
+}
+.series path{
+    /*stroke:blue;*/
+    fill:none;
+}
+.target path{
+    stroke:red;
+    fill:none;
+}
+.area-plus{
+    fill: salmon;
+}
+.plus.above, .minus.below{
+    fill:#84B082;
+}
+.minus.above, .plus.below{
+    fill:#885A5A;
+}
+
+/******************/
+/* 48             */
+/******************/
+
+.bottom90 path{
+    fill: #587D71;
+    /*stroke:red;
+    stroke-width: 1px;*/
+}
+.bottom90 text{
+    fill: #F9ECCC;
+}
+.top10 path{
+    fill: #F9ECCC;
+    /*stroke:blue;
+    stroke-width: 1px;*/
+}
+.top10 text{
+    fill: #587D71;
+}
+.series text{
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-anchor: middle;
+}
+
+/******************/
+/* 42             */
+/******************/
+.clinton{
+    fill:lightskyblue;
+}
+.trump{
+    fill:lightcoral;
+}
+.other{
+    fill: lightgreen
+}
+.undecided{
+    fill: lightgray
+}
+
+/******************/
+/* 40             */
+/******************/
+.legend>rect{
+    fill: white;
+    stroke: darkgray;
+}
+.country{
+    fill:transparent;
+    stroke: #999;
+}
+.legend text{
+    font-size:10px;
+}
+
+/******************/
+/* 32             */
+/******************/
+.legend-item text{
+    font-size:11px;
+}
+
+.title{
+    text-anchor: middle;
+    font-size: 1.2em;
+}
+.heading-buttons{
+    float:right;
+}
+.heading-button{
+    background: rgba(255,255,255,0.1);
+    float:left;
+    margin: 15px;
+    padding:10px;
+    color:white;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+.legend-item.highlight{
+    fill: lightgray;
+}
+.gridline{
+    stroke:lightgray;
+}
+
+.mom-24 .y2012{
+    fill: #99d8c9;
+}
+
+.mom-24 .y2015{
+    fill: #2ca25f;
+}
+
+.mom-22 svg{
+    border:1px black solid;
+}
+.mom-22 .trace{
+    fill:none;
+    stroke: #C2E7D9;
+    stroke-width: 1px;
+}

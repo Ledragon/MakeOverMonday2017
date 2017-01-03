@@ -1,0 +1,29 @@
+
+.col-1,.col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
+    float:left;
+}
+.col-2{
+    width:16.67%;
+}
+.col-3{
+    width:25%;
+}
+.col-4{
+    width:33.33%;
+}
+.col-5{
+    width:41.67%;
+    
+}
+.col-6{
+    width:50%;
+}
+.col-8{
+    width:66.67%;
+}
+.col-9{
+    width:75%;
+}
+.col-12{
+    width:100%;
+}

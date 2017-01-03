@@ -1,0 +1,37 @@
+.card a{
+    text-decoration: none;
+    color: black;
+}
+.flex-2{
+    flex-basis:12.5%;
+}
+.flex-fixed{
+    flex-grow:0;
+    flex-shrink:0;
+}
+.card{
+    height: 180px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border:1px solid lightGray;
+    background: white;
+}
+.card-header{
+    padding:5px;
+    border-bottom:1px solid lightgray;
+}
+.card-body{
+    padding:5px;
+}
+.gallery-container{
+    padding: 5px;
+    flex-grow:1; 
+    display: flex; 
+    flex-wrap:wrap; 
+    overflow-y:auto;
+    background: rgb(230,230,230);
+    
+}
+.gallery-item{
+    padding:5px;
+}
