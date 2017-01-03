@@ -5,7 +5,7 @@ var mom01State = {
     template: '<mom01 class=\"flex-container\"></mom01>',
     url: '/mom01',
     data: {
-        description: ''
+        description: 'Australia’s 50 highest paying jobs are paying men significantly more'
     }
 };
 

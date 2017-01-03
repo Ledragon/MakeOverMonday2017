@@ -5,7 +5,7 @@ import { ICsvService } from '../../../services/csvService';
 export var mom01 = {
     name: 'mom01',
     component: {
-        templateUrl: 'component/challlenges/01/template.html',
+        templateUrl: 'components/challenges/01/template.html',
         controller: controller
     }
 }
@@ -25,11 +25,21 @@ function controller(csvService: ICsvService) {
     let plotHeight = p.height();
     let plotWidth = p.width();
 
-    
-    const fileName = 'mom/1/data/data.csv';
-    csvService.read<any>(fileName, update);
+
+    const fileName = 'components/challenges/01/data/data.txt';
+    csvService.read<any>(fileName, update, parseFunction);
 
     function update(data: Array<any>) {
         console.log(data);
     };
+
+    function parseFunction(d: any) {
+        return {
+            genderRank: parseInt(d['Gender Rank']),
+            occupation: d.Occupation,
+            gender: d.Gender,
+            individuals: parseInt(d.Individuals),
+            income: parseFloat(d['Average Taxable Income $'])
+        }
+    }
 }
