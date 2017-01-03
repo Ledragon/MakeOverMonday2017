@@ -2,6 +2,9 @@ import * as d3 from 'd3';
 import * as plot from '../../../charting/plotFactory';
 import { ICsvService } from '../../../services/csvService';
 
+import { TopLinearAxis } from '../../../charting/TopLinearAxis';
+import { LeftCategoricalAxis } from '../../../charting/LeftCategoricalAxis';
+
 export var mom01 = {
     name: 'mom01',
     component: {
@@ -12,11 +15,11 @@ export var mom01 = {
 
 function controller(csvService: ICsvService) {
     const width = 960;
-    const height = 480;
+    const height = 840;
     let plotMargins = {
-        top: 50,
+        top: 60,
         bottom: 30,
-        left: 80,
+        left: 60,
         right: 30
     };
 
@@ -25,13 +28,76 @@ function controller(csvService: ICsvService) {
     let plotHeight = p.height();
     let plotWidth = p.width();
 
+    d3.select('#chart')
+        .select('svg')
+        .append('defs')
+        .append('clipPath')
+        .attr('id', 'clip')
+        .append('rect')
+        .attr('width', plotWidth)
+        .attr('height', plotHeight);
 
-    const fileName = 'components/challenges/01/data/data.txt';
+
+    let xAxis = new TopLinearAxis<any>(plotGroup, plotWidth, plotHeight);
+    let yAxis = new LeftCategoricalAxis<any>(plotGroup, plotWidth, plotHeight)
+        .padding(0.5)
+        .domain(d3.range(1, 51, 1).map(d => d.toString()));
+    let seriesGroup = plotGroup.append('g')
+        .attr('clip-path', 'url(\'#clip\')')
+        .classed('series-group', true);
+
+    const fileName = 'components/challenges/01/data/data.csv';
     csvService.read<any>(fileName, update, parseFunction);
 
     function update(data: Array<any>) {
-        console.log(data);
+        let byGender = d3.nest<any>()
+            .key(d => d.gender)
+            .entries(data);
+        let femaleTopJobs = byGender.filter(d => d.key === 'Female')[0]
+            .values
+            .sort((a: any, b: any) => a.genderRank - b.genderRank)
+            .splice(0, 50);
+        let maleTopJobs = byGender.filter(d => d.key === 'Male')[0]
+            .values
+            .sort((a: any, b: any) => a.genderRank - b.genderRank)
+            .splice(0, 50);
+
+        xAxis.domain([0, d3.max(data, d => d.income)]);
+
+        drawSeries(maleTopJobs, 'male', 'blue');
+        drawSeries(femaleTopJobs, 'female', 'pink');
     };
+    let fmt = d3.format('$')
+    function drawSeries(data: Array<any>, classed: string, color: string) {
+        var dataBound = seriesGroup.selectAll('.' + classed)
+            .data(data);
+        dataBound
+            .exit()
+            .remove();
+        let enterSelection = dataBound
+            .enter()
+            .append('g')
+            .classed(classed, true)
+            .attr('transform', d => `translate(${0},${yAxis.scale(d.genderRank)})`)
+            .on('mouseenter', function (d) {
+                d3.select(this).select('text')
+                    .style('display', null)
+            })
+            .on('mouseleave', function (d) {
+                d3.select(this).select('text')
+                    .style('display', 'none');
+            });
+        enterSelection.append('rect')
+            .attr('width', d => xAxis.scale(d.income))
+            .attr('height', yAxis.bandWidth());
+        enterSelection.append('text')
+            .style('font-size', '12px')
+            // .style('display', 'none')
+            .style('text-anchor', 'end')
+            .attr('x', d => xAxis.scale(d.income) - 5)
+            .attr('y', yAxis.bandWidth())
+            .text(d => d.occupation + ' - ' + fmt(d.income));
+    }
 
     function parseFunction(d: any) {
         return {
