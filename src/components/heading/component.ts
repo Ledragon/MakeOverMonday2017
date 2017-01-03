@@ -1,4 +1,4 @@
-export class momHeadingController {
+export class headingController {
     name: string = 'test';
     description: string = 'desc';
     static $inject = ['$scope', '$state'];
@@ -12,10 +12,10 @@ export class momHeadingController {
     }
 }
 
-export var momHeading = {
-    name: 'momHeading',
+export var heading = {
+    name: 'heading',
     component: {
-        templateUrl: 'momHeading/template.html',
-        controller: momHeadingController
+        templateUrl: 'components/heading/template.html',
+        controller: headingController
     }
 };

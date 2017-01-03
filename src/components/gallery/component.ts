@@ -1,7 +1,7 @@
 export var gallery = {
     name: 'gallery',
     component: {
-        templateUrl: 'gallery/template.html',
+        templateUrl: 'components/gallery/template.html',
         controller: controller
     }
 }
