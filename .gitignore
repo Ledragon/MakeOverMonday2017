@@ -50,3 +50,4 @@ src/data/build
 *.log
 typings
 dist
+!webpack.config.js
