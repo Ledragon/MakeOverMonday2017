@@ -39,4 +39,8 @@ export class LeftLinearAxis<T> {
     scale(value: number): number {
         return this._scale(value);
     }
+
+    ticks(): number[]{
+        return this._scale.ticks();
+    }
 }

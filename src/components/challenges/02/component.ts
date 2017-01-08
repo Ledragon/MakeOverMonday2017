@@ -30,6 +30,12 @@ function controller(csvService: ICsvService) {
     let plotHeight = p.height();
     let plotWidth = p.width();
 
+
+    let linesGroup = plotGroup.append('g')
+        .classed('lines', true);
+
+    let series = plotGroup.append('g')
+        .classed('series-list', true);
     let t = new title(d3.select('svg'), width, height)
         .text('iPhones Units sold (in millions) - quarterly');
     let yAxis = new LeftLinearAxis(plotGroup, plotWidth, plotHeight);
@@ -46,12 +52,29 @@ function controller(csvService: ICsvService) {
     function update(data: Array<any>) {
         yAxis.domain(d3.extent(data, d => parseFloat(d['Units sold (in millions)'])));
         xAxis.domain(data.map(d => d.Year));
+        let ticks = yAxis.ticks();
+        var linesBound = linesGroup.selectAll('.line')
+            .data(ticks);
+        linesBound
+            .exit()
+            .remove();
+        let linesEnter = linesBound
+            .enter()
+            .append('g')
+            .classed('line', true)
+            .attr('transform', d => `translate(${0},${yAxis.scale(d)})`);
+        linesEnter.append('line')
+            .attr('x1', 0)
+            .attr('x2', plotWidth)
+            .attr('y1', 0)
+            .attr('y1', 0)
+            .style('stroke', 'lightgray');
         quarterScale.range([0, xAxis.bandWidth()]);
         let byYear = d3.nest<any>()
             .key(d => d.Year)
             .entries(data);
 
-        var dataBound = plotGroup.selectAll('.year')
+        var dataBound = series.selectAll('.year')
             .data(byYear);
         dataBound
             .exit()
