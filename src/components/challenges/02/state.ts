@@ -5,7 +5,7 @@ var mom02State = {
     template: '<mom02 class=\"flex-container\"></mom02>',
     url: '/mom02',
     data: {
-        description: ''
+        description: 'Have Apple Lost Their Edge With iPhone?'
     }
 };
 
