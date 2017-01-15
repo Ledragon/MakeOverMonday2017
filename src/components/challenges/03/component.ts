@@ -15,7 +15,7 @@ export var mom03 = {
 }
 
 function controller(csvService: ICsvService) {
-    const width = 960;
+    const width = 720;
     const height = 720;
     let plotMargins = {
         top: 60,
@@ -35,7 +35,7 @@ function controller(csvService: ICsvService) {
     csvService.read<any>(fileName, update, parseFunction);
 
     const yAxis = new LeftCategoricalAxis(plotGroup, plotWidth, plotHeight)
-        .padding(0.5);
+        .padding(0.3);
 
     function update(data: Array<IFormat>) {
         var r = new RegExp('@[a-zA-Z0-9]*:');
@@ -74,6 +74,12 @@ function controller(csvService: ICsvService) {
             .attr('height', yAxis.bandWidth())
             .style('stroke', 'none')
             .style('fill', d => colorScale(d.values.length));
+        enterSelection.append('text')
+            .style('text-anchor', 'end')
+            .style('font-size', '10px')
+            .attr('x', d => xScale(d.values.length)-5)
+            .attr('y',11)
+            .text(d => d.values.length);
     };
 
     function parseFunction(d: any): IFormat {

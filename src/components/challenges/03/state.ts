@@ -5,7 +5,7 @@ var mom03State = {
     template: '<mom03 class=\"flex-container\"></mom03>',
     url: '/mom03',
     data: {
-        description: ''
+        description: 'The 294 Accounts Donald Trump Retweeted During The Election'
     }
 };
 
