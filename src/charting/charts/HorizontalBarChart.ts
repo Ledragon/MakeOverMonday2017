@@ -1,8 +1,8 @@
 import * as d3 from 'd3';
 
-import { title } from './title';
-import * as plot from './plotFactory';
-import { LeftCategoricalAxis } from './LeftCategoricalAxis';
+import { title } from '../title';
+import * as plot from '../plotFactory';
+import { LeftCategoricalAxis } from '../LeftCategoricalAxis';
 
 export class HorizontalBarChart<T>{
     private _x: (d: T) => number;

@@ -1,9 +1,9 @@
 import * as d3 from 'd3';
 
-import { title } from './title';
-import { plot } from './plotFactory';
-import { BottomLinearAxis } from './BottomLinearAxis';
-import { LeftLinearAxis } from './LeftLinearAxis';
+import { title } from '../title';
+import { plot } from '../plotFactory';
+import { BottomLinearAxis } from '../BottomLinearAxis';
+import { LeftLinearAxis } from '../LeftLinearAxis';
 
 
 export class LinearLinearChart<T> {
