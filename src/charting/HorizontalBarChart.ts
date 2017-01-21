@@ -12,6 +12,7 @@ export class HorizontalBarChart<T>{
     private _title: title;
     private _seriesGroup: d3.Selection<SVGElement, T, any, any>;
     private _color: (d: T) => string;
+
     constructor(containerId: string, private _width: number, private _height: number) {
         let plotMargins = {
             top: 60,
@@ -77,7 +78,6 @@ export class HorizontalBarChart<T>{
             .append('g')
             .classed('series', true)
             .attr('transform', (d, i) => `translate(${0},${this._yAxis.scale(this._y(d))})`);
-
 
         var rect = enterSelection.append('rect')
             .attr('x', 0)
