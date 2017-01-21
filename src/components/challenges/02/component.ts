@@ -1,10 +1,11 @@
 import * as d3 from 'd3';
-import * as plot from '../../../charting/plotFactory';
+import { GetContainer, title, BottomCategoricalAxis, LeftLinearAxis } from 'ldd3';
+// import * as plot from '../../../charting/plotFactory';
 
-// import { legentd } from '../../../charting/lege';
-import { title } from '../../../charting/title';
-import { BottomCategoricalAxis } from '../../../charting/BottomCategoricalAxis';
-import { LeftLinearAxis } from '../../../charting/LeftLinearAxis';
+// // import { legentd } from '../../../charting/lege';
+// import { title } from '../../../charting/title';
+// import { BottomCategoricalAxis } from '../../../charting/BottomCategoricalAxis';
+// import { LeftLinearAxis } from '../../../charting/LeftLinearAxis';
 import { ICsvService } from '../../../services/csvService';
 
 export var mom02 = {
@@ -25,7 +26,7 @@ function controller(csvService: ICsvService) {
         right: 30
     };
 
-    let p = plot.plot('#chart', width, height, plotMargins);
+    let p = GetContainer('#chart', width, height, plotMargins);
     let plotGroup = p.group();
     let plotHeight = p.height();
     let plotWidth = p.width();
@@ -89,8 +90,8 @@ function controller(csvService: ICsvService) {
             .enter()
             .append('rect')
             .attr('x', (d: any) => quarterScale(d.Quarter))
-            .attr('y', d => yAxis.scale(parseFloat(d['Units sold (in millions)'])))
-            .attr('height', d => yAxis.scale(0) - yAxis.scale(parseFloat(d['Units sold (in millions)'])))
+            .attr('y', (d:any) => yAxis.scale(parseFloat(d['Units sold (in millions)'])))
+            .attr('height', (d:any) => yAxis.scale(0) - yAxis.scale(parseFloat(d['Units sold (in millions)'])))
             .attr('width', quarterScale.bandwidth())
             .style('fill', (d, i) => colorScale[i]);
     };

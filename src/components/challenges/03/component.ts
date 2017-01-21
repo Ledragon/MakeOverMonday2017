@@ -2,7 +2,7 @@ import { nest } from 'd3-collection';
 import { max } from 'd3-array';
 import { scaleLinear } from 'd3-scale';
 
-import { HorizontalBarChart } from '../../../charting/charts/HorizontalBarChart';
+import { HorizontalBarChart } from 'ldd3';
 import { ICsvService } from '../../../services/csvService';
 
 import { ICsvFormat } from '../ICsvFormat';
