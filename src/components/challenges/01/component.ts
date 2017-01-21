@@ -1,9 +1,7 @@
 import * as d3 from 'd3';
-import * as plot from '../../../charting/plotFactory';
-import { ICsvService } from '../../../services/csvService';
 
-import { TopLinearAxis } from '../../../charting/TopLinearAxis';
-import { LeftCategoricalAxis } from '../../../charting/LeftCategoricalAxis';
+import { ICsvService } from '../../../services/csvService';
+import { GetContainer, TopLinearAxis, LeftCategoricalAxis } from 'ldd3';
 
 export var mom01 = {
     name: 'mom01',
@@ -23,7 +21,7 @@ function controller(csvService: ICsvService) {
         right: 30
     };
 
-    let p = plot.plot('#chart', width, height, plotMargins);
+    let p = GetContainer('#chart', width, height, plotMargins);
     let plotGroup = p.group();
     let plotHeight = p.height();
     let plotWidth = p.width();
