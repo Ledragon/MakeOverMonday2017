@@ -3,8 +3,8 @@ import { IMargins } from './IMargins';
 export class chartContainer {
     private _chartContainerWidth: number;
     private _chartContainerHeight: number;
-    private _group: d3.Selection<any, any, any, any>;
-    private _parent: d3.Selection<any, any, any, any>;
+    private _group: d3.Selection<SVGElement, any, any, any>;
+    private _parent: d3.Selection<SVGElement, any, any, any>;
     constructor(container: d3.Selection<any, any, any, any>, width: number, height: number, margins: IMargins) {
         this._parent = container;
         let chartContainerMargins = margins;
