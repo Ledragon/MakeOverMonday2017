@@ -1,7 +1,7 @@
-import * as d3 from 'd3';
-// import * as plot from '../../../charting/plotFactory';
-// import { title } from '../../../charting/title';
-// import { LeftCategoricalAxis } from '../../../charting/LeftCategoricalAxis';
+import { nest } from 'd3-collection';
+import { max } from 'd3-array';
+import { scaleLinear } from 'd3-scale';
+
 import { HorizontalBarChart } from '../../../charting/HorizontalBarChart';
 import { ICsvService } from '../../../services/csvService';
 
@@ -19,7 +19,7 @@ function controller(csvService: ICsvService) {
     const width = 720;
     const height = 720;
 
-    let colorScale = d3.scaleLinear<string, string>()
+    let colorScale = scaleLinear<string, string>()
         .range(['#CBF7ED', '#EF626C'])
     let hbc = new HorizontalBarChart<any>('chart', width, height)
         .padding(0.3)
@@ -34,12 +34,12 @@ function controller(csvService: ICsvService) {
 
     function update(data: Array<IFormat>) {
         var r = new RegExp('@[a-zA-Z0-9]*:');
-        let byTweeter = d3.nest<IFormat>()
+        let byTweeter = nest<IFormat>()
             .key(d => d.text.match('@[a-zA-Z0-9]*:')[0].replace(':', ''))
             .entries(data.filter(d => d.isRetweet && d.text.match('@[a-zA-Z0-9]*:')))
             .sort((a, b) => b.values.length - a.values.length)
             .slice(0, 30);
-        colorScale.domain([0, d3.max(byTweeter, d => d.values.length)]);
+        colorScale.domain([0, max(byTweeter, d => d.values.length)]);
         hbc.update(byTweeter);
     };
 
