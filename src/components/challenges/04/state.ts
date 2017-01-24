@@ -5,7 +5,7 @@ var mom04State = {
     template: '<mom04 class=\"flex-container\"></mom04>',
     url: '/mom04',
     data: {
-        description: ''
+        description: 'International and Domestic Tourism Spend in New Zealand'
     }
 };
 

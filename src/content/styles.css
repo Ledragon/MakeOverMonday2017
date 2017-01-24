@@ -153,19 +153,6 @@ ui-view, :host, .flex-container{
     stroke:lightgray;
 }
 
-.mom-24 .y2012{
-    fill: #99d8c9;
-}
-
-.mom-24 .y2015{
-    fill: #2ca25f;
-}
-
-.mom-22 svg{
-    border:1px black solid;
-}
-.mom-22 .trace{
-    fill:none;
-    stroke: #C2E7D9;
-    stroke-width: 1px;
+.mom-04 .year-series{
+    fill: none;
 }
