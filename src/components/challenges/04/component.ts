@@ -32,6 +32,6 @@ function controller(csvService: ICsvService) {
             .selectAll('svg')
             .data(map1)
             .enter()
-            .call(lineChart);
+            .call(lineChart());
     };
 }

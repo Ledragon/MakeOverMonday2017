@@ -1,5 +1,6 @@
 import * as d3 from 'd3';
 export function lineChart(selection: d3.Selection<HTMLDivElement, any, any, any>) {
+    
     let width = 800;
     let height = 400;
     let svg = selection
