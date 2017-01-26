@@ -1,7 +1,7 @@
 import * as d3 from 'd3';
 
 import { ICsvService } from '../../../services/csvService';
-import { LineChart } from './chart';
+import { CategoricalLinearChart } from 'ldd3';
 export var mom04 = {
     name: 'mom04',
     component: {
@@ -30,7 +30,7 @@ function controller(csvService: ICsvService) {
         });
         map1.forEach(m => {
             try {
-                var c = new LineChart<any>('#chart', 800, 400)
+                var c = new CategoricalLinearChart<any>('#chart', 800, 400)
                     .title(m.type)
                     .x(d => d.Month)
                     .y(d => parseInt(d['Regional Tourism Indicator (baseline 100)']))
@@ -41,10 +41,5 @@ function controller(csvService: ICsvService) {
             }
 
         });
-        // d3.select('#chart')
-        //     .selectAll('svg')
-        //     .data(map1)
-        //     .enter()
-        //     .call(lineChart);
     };
 }
