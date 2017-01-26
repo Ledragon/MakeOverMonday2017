@@ -11,6 +11,7 @@ export class LineChart<T> {
     private _x: (d: T) => string;
     private _y: (d: T) => number;
     private _groupBy: (d: T) => string;
+
     constructor(selector: string, private _width: number, private _height: number) {
         var width = _width;
         var height = _height;
@@ -51,7 +52,7 @@ export class LineChart<T> {
         this._lineGenerator = d3.line<any>()
             .curve(d3.curveStep)
             .x(d => this._xAxis.scale(this._x(d)) + this._xAxis.bandWidth() / 2)
-            .y(d => this._yAxis.scale(parseInt(d['Regional Tourism Indicator (baseline 100)'])));
+            .y(d => this._yAxis.scale(this._y(d)));
     }
 
     x(value: (d: T) => string): LineChart<T> {
@@ -100,75 +101,22 @@ export class LineChart<T> {
             .attr('d', (d: any) => this._lineGenerator(d.values))
             .style('stroke', (d, i) => d3.schemeCategory10[i]);
 
-        // var legendWidth = 90;
-        // let legend = this._group.append('g')
-        //     .classed('legend', true)
-        //     .attr('transform', (d, i) => `translate(${this._width - legendWidth},${this._plotHeight / 2})`);
-        // let legendBound = legend.selectAll('.legend-item')
-        //     .data(d => d.byYear);
-        // legendBound.exit().remove();
-        // let enterLegend = legendBound.enter().append('g').classed('legend-item', true)
-        //     .attr('transform', (d, i) => `translate(${10},${(i + 1) * 20})`);
-        // enterLegend.append('rect')
-        //     .attr('width', 10)
-        //     .attr('height', 10)
-        //     .style('fill', (d, i) => d3.schemeCategory10[i]);
-        // enterLegend.append('text')
-        //     .attr('x', 15)
-        //     .attr('y', 9)
-        //     .text(d => d.key);
+        var legendWidth = 90;
+        let legend = this._group.append('g')
+            .classed('legend', true)
+            .attr('transform', (d, i) => `translate(${this._width - legendWidth},${this._plotHeight / 2})`);
+        let legendBound = legend.selectAll('.legend-item')
+            .data(d => grouped);
+        legendBound.exit().remove();
+        let enterLegend = legendBound.enter().append('g').classed('legend-item', true)
+            .attr('transform', (d, i) => `translate(${10},${(i + 1) * 20})`);
+        enterLegend.append('rect')
+            .attr('width', 10)
+            .attr('height', 10)
+            .style('fill', (d, i) => d3.schemeCategory10[i]);
+        enterLegend.append('text')
+            .attr('x', 15)
+            .attr('y', 9)
+            .text(d => d.key);
     }
-}
-
-
-function lineChart(selection: d3.Selection<HTMLDivElement, any, any, any>) {
-
-    let width = 800;
-    let height = 400;
-
-    let datum = selection.datum();
-
-    // let yScale = d3.scaleLinear()
-    //     .domain([0, 150])//d3.max(data, f => parseInt(f['Regional Tourism Indicator (baseline 100)']))])
-    //     // .nice()
-    //     .range([plotHeight, 0]);
-    // let yAxis = d3.axisLeft(yScale);
-    // let yAxisGroup = plotGroup.append('g')
-    //     .classed('axis', true)
-    //     .call(yAxis);
-    // let lineGenerator = d3.line<any>()
-    //     .curve(d3.curveStep)
-    //     .x(d => xScale(d.Month) + xScale.bandwidth() / 2)
-    //     .y(d => yScale(parseInt(d['Regional Tourism Indicator (baseline 100)'])));
-    var dataBound = plotGroup.selectAll('.year-series')
-        .data(datum.byYear);
-    dataBound
-        .exit()
-        .remove();
-    var enterSelection = dataBound
-        .enter()
-        .append('g')
-        .classed('year-series', true);
-    enterSelection.append('path')
-        .attr('d', d => lineGenerator(d.values))
-        .style('stroke', (d, i) => d3.schemeCategory10[i]);
-
-    var legendWidth = 90;
-    let legend = svg.append('g')
-        .classed('legend', true)
-        .attr('transform', (d, i) => `translate(${width - legendWidth},${plotHeight / 2})`);
-    let legendBound = legend.selectAll('.legend-item')
-        .data(d => d.byYear);
-    legendBound.exit().remove();
-    let enterLegend = legendBound.enter().append('g').classed('legend-item', true)
-        .attr('transform', (d, i) => `translate(${10},${(i + 1) * 20})`);
-    enterLegend.append('rect')
-        .attr('width', 10)
-        .attr('height', 10)
-        .style('fill', (d, i) => d3.schemeCategory10[i]);
-    enterLegend.append('text')
-        .attr('x', 15)
-        .attr('y', 9)
-        .text(d => d.key);
-
 }
