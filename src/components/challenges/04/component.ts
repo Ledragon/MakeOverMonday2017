@@ -30,7 +30,6 @@ function controller(csvService: ICsvService) {
         });
         map1.forEach(m => {
             try {
-                console.log(m);
                 var c = new LineChart<any>('#chart', 800, 400)
                     .title(m.type)
                     .x(d => d.Month)

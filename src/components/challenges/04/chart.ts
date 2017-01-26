@@ -1,6 +1,8 @@
 import * as d3 from 'd3';
 import { BottomCategoricalAxis, LeftLinearAxis } from 'ldd3';
 
+import { Legend } from './Legend';
+
 export class LineChart<T> {
     private _group: d3.Selection<any, any, any, any>;
     private _plotGroup: d3.Selection<any, any, any, any>;
@@ -8,9 +10,11 @@ export class LineChart<T> {
     private _yAxis: LeftLinearAxis<T>;
     private _lineGenerator: d3.Line<T>;
     private _plotHeight: number;
-    private _x: (d: T) => string;
-    private _y: (d: T) => number;
+    private _x: (d: T, i: number) => string;
+    private _y: (d: T, i: number) => number;
     private _groupBy: (d: T) => string;
+
+    private _legend: Legend<any>;
 
     constructor(selector: string, private _width: number, private _height: number) {
         var width = _width;
@@ -51,18 +55,26 @@ export class LineChart<T> {
         this._yAxis = new LeftLinearAxis(plotGroup, plotWidth, plotHeight);
         this._lineGenerator = d3.line<any>()
             .curve(d3.curveStep)
-            .x(d => this._xAxis.scale(this._x(d)) + this._xAxis.bandWidth() / 2)
-            .y(d => this._yAxis.scale(this._y(d)));
+            .x((d, i) => this._xAxis.scale(this._x(d, i)) + this._xAxis.bandWidth() / 2)
+            .y((d, i) => this._yAxis.scale(this._y(d, i)));
+
+
+        var legendWidth = 90;
+        var legendContainer = svg.append('g')
+            .attr('transform', (d, i) => `translate(${this._width},${this._height / 2})`);
+        this._legend = new Legend<any>(legendContainer, this._width, this._plotHeight)
+            .label(d => d.key)
+            .color((d, i) => d3.schemeCategory10[i]);
     }
 
-    x(value: (d: T) => string): LineChart<T> {
+    x(value: (d: T, i: number) => string): LineChart<T> {
         if (arguments.length) {
             this._x = value;
         }
         return this;
     }
 
-    y(value: (d: T) => number): LineChart<T> {
+    y(value: (d: T, i: number) => number): LineChart<T> {
         if (arguments.length) {
             this._y = value;
         }
@@ -83,8 +95,8 @@ export class LineChart<T> {
     }
 
     update(data: Array<T>): void {
-        this._xAxis.domain(data.map(d => this._x(d)));
-        this._yAxis.domain([0, d3.max(data, d => this._y(d))]);
+        this._xAxis.domain(data.map((d, i) => this._x(d, i)));
+        this._yAxis.domain([0, d3.max(data, (d, i) => this._y(d, i))]);
 
         let grouped = d3.nest<T>()
             .key(d => this._groupBy(d))
@@ -100,23 +112,22 @@ export class LineChart<T> {
         enterSelection.append('path')
             .attr('d', (d: any) => this._lineGenerator(d.values))
             .style('stroke', (d, i) => d3.schemeCategory10[i]);
-
-        var legendWidth = 90;
-        let legend = this._group.append('g')
-            .classed('legend', true)
-            .attr('transform', (d, i) => `translate(${this._width - legendWidth},${this._plotHeight / 2})`);
-        let legendBound = legend.selectAll('.legend-item')
-            .data(d => grouped);
-        legendBound.exit().remove();
-        let enterLegend = legendBound.enter().append('g').classed('legend-item', true)
-            .attr('transform', (d, i) => `translate(${10},${(i + 1) * 20})`);
-        enterLegend.append('rect')
-            .attr('width', 10)
-            .attr('height', 10)
-            .style('fill', (d, i) => d3.schemeCategory10[i]);
-        enterLegend.append('text')
-            .attr('x', 15)
-            .attr('y', 9)
-            .text(d => d.key);
+        this._legend.update(grouped);
+        // let legendBound = this._legend.selectAll('.legend-item')
+        //     .data(d => grouped);
+        // legendBound.exit().remove();
+        // let enterLegend = legendBound
+        //     .enter()
+        //     .append('g')
+        //     .classed('legend-item', true)
+        //     .attr('transform', (d, i) => `translate(${10},${(i + 1) * 20})`);
+        // enterLegend.append('rect')
+        //     .attr('width', 10)
+        //     .attr('height', 10)
+        //     .style('fill', (d, i) => d3.schemeCategory10[i]);
+        // enterLegend.append('text')
+        //     .attr('x', 15)
+        //     .attr('y', 9)
+        //     .text(d => d.key);
     }
 }
