@@ -39,7 +39,6 @@ function controller(csvService: ICsvService) {
             } catch (e) {
                 console.error(e);
             }
-
         });
     };
 }
