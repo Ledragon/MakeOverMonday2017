@@ -5,7 +5,7 @@ var mom05State = {
     template: '<mom05 class=\"flex-container\"></mom05>',
     url: '/mom05',
     data: {
-        description: ''
+        description: 'Employment Growth in G-7 Countries'
     }
 };
 
