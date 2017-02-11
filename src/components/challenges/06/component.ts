@@ -1,7 +1,7 @@
 import * as d3 from 'd3';
 
 import { ICsvService } from '../../../services/csvService';
-import { TimeLinearChart } from './TimeLinearChart';
+import { TimeLinearChart } from 'ldd3';
 
 export var mom06 = {
     name: 'mom06',
