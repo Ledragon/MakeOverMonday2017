@@ -1,8 +1,7 @@
 import * as d3 from 'd3';
 
 import { ICsvService } from '../../../services/csvService';
-import { BottomTimeAxis } from './BottomTimeAxis';
-import { LeftLinearAxis } from 'ldd3';
+import { TimeLinearChart } from './TimeLinearChart';
 
 export var mom06 = {
     name: 'mom06',
@@ -16,18 +15,18 @@ function controller(csvService: ICsvService) {
 
     var width = 960;
     var height = 480;
-    let svg = d3.select('#chart')
-        .append('svg')
-        .attr('width', width)
-        .attr('height', height);
-    this._group = svg;
+    // let svg = d3.select('#chart')
+    //     .append('svg')
+    //     .attr('width', width)
+    //     .attr('height', height);
+    // this._group = svg;
 
-    let plotMargins = {
-        top: 60,
-        bottom: 30,
-        left: 60,
-        right: 90
-    };
+    // let plotMargins = {
+    //     top: 60,
+    //     bottom: 30,
+    //     left: 60,
+    //     right: 90
+    // };
 
     // svg.append('rect')
     //     .attr('width', width)
@@ -37,29 +36,28 @@ function controller(csvService: ICsvService) {
     // svg.append('g')
     //     .classed('title', true)
     //     .attr('transform', (d, i) => `translate(${width / 2},${30})`)
-    //     .append('text');
+    //     .append('text')
+    //     .text('Total amount spent on trips');
 
-    //TODO avoid nasty casting        
-    let plotGroup: d3.Selection<SVGGElement, any, any, any> = svg.append('g')
-        .classed('plot', true)
-        .attr('transform', `translate(${plotMargins.left},${plotMargins.top})`) as d3.Selection<SVGGElement, any, any, any>;
-
-    let plotWidth = width - plotMargins.left - plotMargins.right;
-    let plotHeight = height - plotMargins.top - plotMargins.bottom;
+    var totalChart = new TimeLinearChart<any>('#chart', width, height)
+        .x(d => d.timestamp)
+        .y(d => d.total)
+        .yFormat('$.0s')
+        .title('Total trip amount');
 
 
 
     const fileName = 'components/challenges/06/data/data.csv';
     csvService.read<any>(fileName, update, parse);
-    var timeAxis = new BottomTimeAxis<any>(plotGroup, plotWidth, plotHeight)
-    var leftAxis = new LeftLinearAxis<any>(plotGroup, plotWidth, plotHeight)
-    .format('$.2s')    ;
+
+
     function update(data: Array<any>) {
         var sorted = data.sort((a, b) => a.timestamp - b.timestamp);
-        console.log(sorted);
-        var extent = d3.extent(sorted, s => s.timestamp);
-        timeAxis.domain(extent);
-        leftAxis.domain([0, d3.max(sorted, s => s.total)]);
+        // var extent = d3.extent(sorted, s => s.timestamp);
+        totalChart.update(sorted);
+        // timeAxis.domain(extent);
+        // leftAxis.domain([0, d3.max(sorted, s => s.total)]);
+        // path.attr('d', lineGenerator(sorted);)
     };
 
     function parse(d: any): any {

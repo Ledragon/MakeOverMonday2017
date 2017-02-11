@@ -25,10 +25,8 @@ export class BottomTimeAxis<T> {
         this._axis = xAxis;
     }
 
-    //TODO
     format(value: string): BottomTimeAxis<T>{
         this._axis.tickFormat(timeFormat(value));
-        this._group.call(this._axis);
         return this;
     }
 
@@ -38,7 +36,7 @@ export class BottomTimeAxis<T> {
         return this;
     }
 
-    scale(value: number): number {
+    scale(value: Date): number {
         return this._scale(value);
     }
 }
