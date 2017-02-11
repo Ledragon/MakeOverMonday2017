@@ -22,7 +22,7 @@ export class TimeLinearChart<T>{
             top: 60,
             bottom: 30,
             left: 60,
-            right: 90
+            right: 30
         };
         svg.append('g')
             .classed('title', true)
@@ -45,6 +45,11 @@ export class TimeLinearChart<T>{
         this._path = group.append('path')
             .style('fill', 'none')
             .style('stroke', 'lightgray');
+    }
+
+    color(value: string): TimeLinearChart<T> {
+        this._path.style('stroke', value);
+        return this;
     }
 
     x(value: (d: T, i: number) => Date): TimeLinearChart<T> {
@@ -75,6 +80,7 @@ export class TimeLinearChart<T>{
 
     title(value: string): TimeLinearChart<T> {
         this._group.select('.title')
+            .select('text')
             .text(value);
         return this;
     }

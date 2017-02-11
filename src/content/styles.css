@@ -156,3 +156,16 @@ ui-view, :host, .flex-container{
 .mom-04 .year-series{
     fill: none;
 }
+
+.mom-06{
+    background: #000022;
+}
+.mom-06 .chart{
+    /*border: 1px solid white;*/
+}
+.mom-06 text{
+    fill:#F9ECCC;
+}
+.mom-06 path.domain, .mom-06 .tick line{
+    stroke:#F9ECCC;
+}

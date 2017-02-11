@@ -13,51 +13,56 @@ export var mom06 = {
 
 function controller(csvService: ICsvService) {
 
-    var width = 960;
-    var height = 480;
-    // let svg = d3.select('#chart')
-    //     .append('svg')
-    //     .attr('width', width)
-    //     .attr('height', height);
-    // this._group = svg;
+    var width = 900;
+    var height = 240;
+    const dateFormat = '%Y-%m';
 
-    // let plotMargins = {
-    //     top: 60,
-    //     bottom: 30,
-    //     left: 60,
-    //     right: 90
-    // };
-
-    // svg.append('rect')
-    //     .attr('width', width)
-    //     .attr('height', height)
-    //     .style('fill', 'none')
-    //     .style('stroke', 'darkGray');
-    // svg.append('g')
-    //     .classed('title', true)
-    //     .attr('transform', (d, i) => `translate(${width / 2},${30})`)
-    //     .append('text')
-    //     .text('Total amount spent on trips');
-
-    var totalChart = new TimeLinearChart<any>('#chart', width, height)
+    var totalChart = new TimeLinearChart<any>('#total', width, height)
         .x(d => d.timestamp)
         .y(d => d.total)
+        .xFormat(dateFormat)
         .yFormat('$.0s')
-        .title('Total trip amount');
-
-
+        .title('Total trip amount per month')
+        .color(d3.schemeCategory10[0]);
+   
+    var tipsChart = new TimeLinearChart<any>('#tips', width, height)
+        .x(d => d.timestamp)
+        .y(d => d.tips)
+        .xFormat(dateFormat)
+        .yFormat('$.0s')
+        .color(d3.schemeCategory10[1])
+        .title('Total trip tips per month');
+    var faresChart = new TimeLinearChart<any>('#fares', width, height)
+        .x(d => d.timestamp)
+        .y(d => d.fare)
+        .xFormat(dateFormat)
+        .yFormat('$.0s')
+        .color(d3.schemeCategory10[2])
+        .title('Total trip fare per month');
+    
+     var secondsChart = new TimeLinearChart<any>('#seconds', width, height)
+        .x(d => d.timestamp)
+        .y(d => d.seconds)
+        .xFormat(dateFormat)
+        .color(d3.schemeCategory10[0])
+        .title('Average trip seconds per month');
+     var milesChart = new TimeLinearChart<any>('#miles', width, height)
+        .x(d => d.timestamp)
+        .y(d => d.miles)
+        .xFormat(dateFormat)
+        .color(d3.schemeCategory10[1])
+        .title('Average trip miles per month');
 
     const fileName = 'components/challenges/06/data/data.csv';
     csvService.read<any>(fileName, update, parse);
 
-
     function update(data: Array<any>) {
         var sorted = data.sort((a, b) => a.timestamp - b.timestamp);
-        // var extent = d3.extent(sorted, s => s.timestamp);
         totalChart.update(sorted);
-        // timeAxis.domain(extent);
-        // leftAxis.domain([0, d3.max(sorted, s => s.total)]);
-        // path.attr('d', lineGenerator(sorted);)
+        secondsChart.update(sorted);
+        tipsChart.update(sorted);
+        faresChart.update(sorted);
+        milesChart.update(sorted);
     };
 
     function parse(d: any): any {

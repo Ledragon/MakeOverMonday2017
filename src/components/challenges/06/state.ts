@@ -5,7 +5,7 @@ var mom06State = {
     template: '<mom06 class=\"flex-container\"></mom06>',
     url: '/mom06',
     data: {
-        description: ''
+        description: 'Inside Chicago’s Taxi Data: Busiest and Slowest Days, Average Tips And More'
     }
 };
 
