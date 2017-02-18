@@ -15,7 +15,8 @@ function controller(csvService: ICsvService) {
 
     var leftChart = new MultiCategoricalChart<any>('#chart', width, height)
         .x(d => d.year)
-        .y(d => d.amount);
+        .y(d => d.amount)
+        .groupBy(d => d.what);
     const fileName = 'components/challenges/07/data/data.csv';
     csvService.read<any>(fileName, update);
 
