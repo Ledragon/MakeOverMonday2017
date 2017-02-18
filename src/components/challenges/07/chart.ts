@@ -1,5 +1,5 @@
 import * as d3 from 'd3';
-import { LeftLinearAxis, BottomCategoricalAxis, GetContainer } from 'ldd3';
+import { LeftLinearAxis, BottomCategoricalAxis, GetContainer, title } from 'ldd3';
 import { Legend } from './legend';
 
 export class MultiCategoricalChart<T> {
@@ -12,12 +12,13 @@ export class MultiCategoricalChart<T> {
     private _groupBy: (d: T) => string;
     private _seriesGroup: d3.Selection<any, any, any, any>;
     private _legend: Legend<string>;
+    private _title: title;
     constructor(selector: string, private _width: number, private _height: number) {
         let plotMargins = {
-            top: 30,
+            top: 60,
             bottom: 30,
             left: 90,
-            right: 150
+            right: 210
         };
         var container = GetContainer(selector, _width, _height, plotMargins);
         this._group = container.group();
@@ -36,8 +37,12 @@ export class MultiCategoricalChart<T> {
         this._legend = new Legend<string>(legendContainer, container.width(), container.height())
             .color((d, i) => d3.schemeCategory10[i])
             .label(d => d);
+        this._title = new title(container.parent(), _width, _height);
     }
-
+    title(value: string): MultiCategoricalChart<T> {
+        this._title.text(value);
+        return this;
+    }
     x(value: (d: T) => string): MultiCategoricalChart<T> {
         if (arguments.length) {
             this._x = value;

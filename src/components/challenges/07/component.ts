@@ -11,9 +11,13 @@ export var mom07 = {
 
 function controller(csvService: ICsvService) {
     const width = 960;
-    const height = 480;
+    const height = 360;
 
     var leftChart = new MultiCategoricalChart<any>('#chart', width, height)
+        .x(d => d.year)
+        .y(d => d.amount)
+        .groupBy(d => d.what);
+    var chartBy = new MultiCategoricalChart<any>('#chart2', width, height)
         .x(d => d.year)
         .y(d => d.amount)
         .groupBy(d => d.what);
@@ -43,6 +47,11 @@ function controller(csvService: ICsvService) {
             .key(d => d.category)
             .entries(toto);
         console.log(byCategory);
-        leftChart.update(byCategory[0].values);
+        leftChart
+            .title(byCategory[0].key)
+            .update(byCategory[0].values);
+        chartBy
+            .title(byCategory[1].key)
+            .update(byCategory[1].values);
     };
 }
