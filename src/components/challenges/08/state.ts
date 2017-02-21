@@ -5,7 +5,7 @@ var mom08State = {
     template: '<mom08 class=\"flex-container\"></mom08>',
     url: '/mom08',
     data: {
-        description: ''
+        description: 'The EU potato sector'
     }
 };
 
