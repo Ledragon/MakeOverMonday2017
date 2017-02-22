@@ -1,7 +1,6 @@
 import * as d3 from 'd3';
 import { ICsvService } from '../../../services/csvService';
-import { HorizontalBarChart } from 'ldd3';
-import { Slider } from './slider';
+import { HorizontalBarChart, Slider } from 'ldd3';
 
 export var mom08 = {
     name: 'mom08',
@@ -22,21 +21,22 @@ function controller(csvService: ICsvService) {
         .y(d => d.country)
         .title('Potato selling price (€/100kg)')
         .color(() => 'red');
-    let slider = new Slider('#slider', 480, 60);
+    var byYear: {
+        key: string,
+        values: Array<ISellingPrice>
+    }[];
+    let slider = new Slider('#slider', 480, 60)
+        .on('click', (d, i) => {
+            horizontal.update(byYear[i].values.sort((a: ISellingPrice, b: ISellingPrice) => b.price - a.price));
+        });
 
     function update(data: Array<ISellingPrice>) {
-        // let byCOuntry = d3.nest<ISellingPrice>()
-        //     .key(d => d.country)
-        //     .entries(data);
-        // console.log(byCOuntry);
-
-        let byYear = d3.nest<ISellingPrice>()
+        byYear = d3.nest<ISellingPrice>()
             .key(d => d.year.toString())
             .entries(data);
+        console.log(JSON.stringify(byYear));
         horizontal.update(byYear[0].values.sort((a: ISellingPrice, b: ISellingPrice) => b.price - a.price));
         slider.domain(d3.extent(data, d => d.year));
-    
-        // console.log(byYear);
     };
 
     function parse(d: any): ISellingPrice {

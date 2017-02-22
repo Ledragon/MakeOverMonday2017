@@ -185,9 +185,17 @@ ui-view, :host, .flex-container{
     stroke:#ddd;
     stroke-width:8px;
 }
+.track-overlay{
+    fill: none;
+    stroke: none;
+    stroke-width: 50px;
+    cursor: pointer;
+    pointer-events: stroke;
+}
 .slider .tick{
     font-size:.6em;
     text-anchor: middle;
+    cursor: pointer;
 }
 .handle{
     fill:#ddd;
