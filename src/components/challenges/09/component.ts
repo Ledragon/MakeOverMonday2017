@@ -25,7 +25,7 @@ function controller(csvService: ICsvService) {
     var chartByCountry = getBarChart('map', 'Spendings by country', (d: IDataFormat) => interpolateGreens(colorScale(d.amount)));
     var chartByCategory = getBarChart('byCategory', 'Spendings by category', (d: IDataFormat) => interpolateGreens(colorScale(d.amount)));
     var chartByMerchant = getBarChart('byMerchant', 'Spendings by merchant', (d: IDataFormat) => interpolateGreens(colorScale(d.amount)));
-    var chartBySubCategory = getBarChart('bySubCategory', 'Spendings by sub-category', (d: IDataFormat) => interpolateGreens(colorScale(d.amount)));
+    var chartBySubCategory = getBarChart('bySubCategory', 'Spendings by sub-category (Transportation)', (d: IDataFormat) => interpolateGreens(colorScale(d.amount)));
 
     const fileName = 'components/challenges/09/data/data.csv';
     csvService.read<any>(fileName, update, parse);
