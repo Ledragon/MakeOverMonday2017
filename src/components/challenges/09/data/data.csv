@@ -1,0 +1,111 @@
+Date,Merchant,Amount,Country,Category,Subcategory
+05-01-16,SALLMANN YANG & ALAMEDA,243.75,United States,Business Services,Banking Services
+06-01-16,ITUNES,1.99,United States,Merchandise & Supplies,Internet Purchase
+07-01-16,BA.COM UK,545.01,United Kingdom,Travel,Airline
+12-01-16,FITNESSKEEPER,39.99,United States,Merchandise & Supplies,Internet Purchase
+20-01-16,AMAZON UK MARKETPLACE APE,20.78,Luxembourg,Merchandise & Supplies,Internet Purchase
+21-01-16,AMAZON UK MARKETPLACE APE,106.65,Luxembourg,Merchandise & Supplies,Internet Purchase
+21-01-16,AMAZON UK MARKETPLACE APE,109.40,Luxembourg,Merchandise & Supplies,Internet Purchase
+21-01-16,NEW YORK ROAD RUNNERS CLUB,11.00,United States,Other,Charities
+22-01-16,EASYJET,20.26,United Kingdom,Travel,Airline
+22-01-16,EASYJET,63.86,United Kingdom,Travel,Airline
+22-01-16,SCANDIC HAMBURG EMPORIO,21.08,Germany,Travel,Lodging
+23-01-16,HILTON GRAND VAC CLUB,55.00,United States,Travel,Lodging
+26-01-16,ITUNES,14.99,United States,Merchandise & Supplies,Internet Purchase
+05-02-16,SKYPE,14.59,United Kingdom,Communications,Telephone Comm
+13-02-16,HOLIDAY CLUB SPORT AND SPA,383.44,Sweden,Travel,Lodging
+13-02-16,TIVOLI KROEN,111.96,Denmark,Restaurant,Restaurant
+14-02-16,HOLIDAY CLUB SPORT AND SPA,155.54,Sweden,Travel,Lodging
+15-02-16,FLYGTAXI,341.70,Sweden,Transportation,Taxis & Coach
+15-02-16,RAUTJOXA,45.58,Sweden,Restaurant,Restaurant
+16-02-16,ICA ARE,43.22,Sweden,Merchandise & Supplies,Groceries
+16-02-16,IZETTLE SE,302.06,Sweden,Merchandise & Supplies,Internet Purchase
+17-02-16,BROKEN,56.77,Sweden,Restaurant,Bar & Café
+18-02-16,BROKEN,118.43,Sweden,Restaurant,Bar & Café
+19-02-16,ICA ARE,20.95,Sweden,Merchandise & Supplies,Groceries
+19-02-16,ICA ARE,23.85,Sweden,Merchandise & Supplies,Groceries
+22-02-16,DELTA AIR LINES,1136.79,United Kingdom,Travel,Airline
+22-02-16,FLYGTAXI,340.91,Sweden,Transportation,Taxis & Coach
+26-02-16,UBER,45.78,Netherlands,Transportation,Taxis & Coach
+03-03-16,ITUNES,1.29,United States,Merchandise & Supplies,Internet Purchase
+04-03-16,ENTERPRISE EVENTS GRP,200.00,United States,Other,Miscellaneous
+04-03-16,ENTERPRISE EVENTS GRP,295.00,United States,Other,Miscellaneous
+06-03-16,HILTON SAN DIEGO BAYFRONT,303.23,United States,Travel,Lodging
+08-03-16,NEW YORK ROAD RUNNERS CLUB,255.00,United States,Other,Charities
+26-03-16,ITUNES,9.94,United States,Merchandise & Supplies,Internet Purchase
+13-04-16,SOUTHWEST AIRLINES,5.60,United States,Travel,Airline
+14-04-16,DELTA AIR LINES,238.76,United Kingdom,Travel,Airline
+15-04-16,ITUNES,6.99,United States,Merchandise & Supplies,Internet Purchase
+24-04-16,ITUNES,19.99,United States,Merchandise & Supplies,Internet Purchase
+26-04-16,ITUNES,14.99,United States,Merchandise & Supplies,Internet Purchase
+26-05-16,ITUNES,14.99,United States,Merchandise & Supplies,Internet Purchase
+29-05-16,UBER,83.01,Netherlands,Transportation,Taxis & Coach
+02-06-16,EURO DISNEY VACANCES,251.88,United Kingdom,Travel,Travel Agencies
+03-06-16,UBER,69.03,Netherlands,Transportation,Taxis & Coach
+05-06-16,UBER,45.53,United States,Transportation,Taxis & Coach
+05-06-16,UBER,80.49,United States,Transportation,Taxis & Coach
+07-06-16,DUNKIN DONUTS,15.00,United States,Restaurant,Bar & Café
+09-06-16,CALTRAIN,5.75,United States,Transportation,Rail Services
+09-06-16,FOX SPORTS GRILL,24.52,United States,Restaurant,Restaurant
+09-06-16,UBER,9.23,United States,Transportation,Taxis & Coach
+10-06-16,BLUE LINE PIZZA,65.81,United States,Restaurant,Restaurant
+10-06-16,HILTON SAN DIEGO BAYFRONT,1399.92,United States,Travel,Lodging
+10-06-16,UBER,7.91,United States,Transportation,Taxis & Coach
+10-06-16,UBER,10.08,United States,Transportation,Taxis & Coach
+11-06-16,UBER,38.09,United States,Transportation,Taxis & Coach
+13-06-16,UBER,14.38,Netherlands,Transportation,Taxis & Coach
+14-06-16,Amazon US Prime,99.00,United States,Merchandise & Supplies,Mail Order
+19-06-16,ARGOS,787.11,United Kingdom,Merchandise & Supplies,Wholesale Stores
+26-06-16,ITUNES,14.99,United States,Merchandise & Supplies,Internet Purchase
+01-07-16,NEW YORK CITY MARATHON,45.00,United States,Other,Charities
+12-07-16,DELTA AIR LINES,5.60,United States,Travel,Airline
+13-07-16,DELTA AIR LINES,5.60,United States,Travel,Airline
+13-07-16,ITUNES,1.99,United States,Merchandise & Supplies,Internet Purchase
+26-07-16,ITUNES,14.99,United States,Merchandise & Supplies,Internet Purchase
+27-07-16,SALLMANN YANG & ALAMEDA,1580.50,United States,Business Services,Banking Services
+10-08-16,APPLE DISTRIBUTION INTERNATIONAL EMEA,1873.43,Ireland,Merchandise & Supplies,Internet Purchase
+18-08-16,AMAZON UK MARKETPLACE APE,946.92,Luxembourg,Merchandise & Supplies,Internet Purchase
+24-08-16,CORE,2460.84,United Kingdom,Restaurant,Bar & Café
+28-08-16,GODADDY.COM,14.74,United States,Other,Miscellaneous
+30-08-16,ITUNES,1.99,United States,Merchandise & Supplies,Internet Purchase
+01-09-16,AIRBNB,200.00,United States,Travel,Travel Agencies
+03-09-16,TRAVEL TROLLEY,3864.46,United Kingdom,Travel,Travel Agencies
+07-09-16,THE EVENT EXCHANGE LTD,556.42,United Kingdom,Entertainment,General Events
+12-09-16,GODADDY.COM,10.66,United States,Other,Miscellaneous
+17-09-16,DOUBLETREE BY HILTON,129.83,United Kingdom,Travel,Lodging
+20-09-16,UBER,9.86,Netherlands,Transportation,Taxis & Coach
+21-09-16,ADYEN RECURRING,10.44,Czech Republic,Merchandise & Supplies,Internet Purchase
+22-09-16,ITUNES,0.99,United States,Merchandise & Supplies,Internet Purchase
+16-10-16,VIATOR/TRIPADVISOR,156.30,United Kingdom,Travel,Travel Agencies
+18-10-16,HILTON,297.85,United States,Travel,Lodging
+24-10-16,AUTO GREEN RENT A CAR,120.02,Portugal,Transportation,Vehicle Leasing & Purchase
+24-10-16,NIKE RETAIL,182.10,Portugal,Merchandise & Supplies,Sporting Goods Stores
+26-10-16,CARLOS MOIA IMP EXP,57.75,Portugal,Restaurant,Restaurant
+26-10-16,GRO INFLIGHT SHOP,32.30,United Kingdom,Merchandise & Supplies,General Retail
+26-10-16,IBERUnited States HOTELARIA E RESTAURACAO S.A.,73.00,Portugal,Restaurant,Bar & Café
+27-10-16,MOURASTOCK INVEST TURIST HOTELEI SA,24.14,Portugal,Travel,Lodging
+02-11-16,GETT,58.00,United States,Business Services,Other Services
+05-11-16,PODS #50,-1510.13,United States,Transportation,Other Transportation
+06-11-16,SHERATON NY HOTEL TIMES SQ,621.00,United States,Travel,Lodging
+07-11-16,GETT,80.63,United States,Business Services,Other Services
+08-11-16,OAKLEY,3.70,United States,Merchandise & Supplies,General Retail
+12-11-16,HILTON,913.68,United States,Travel,Lodging
+12-11-16,UBER,7.29,United States,Transportation,Taxis & Coach
+20-11-16,STUBHUB.COM,244.06,United States,Entertainment,General Events
+22-11-16,DELTA AIR LINES,11.20,United States,Travel,Airline
+25-11-16,AMAZON UK MARKETPLACE APE,674.88,Luxembourg,Merchandise & Supplies,Internet Purchase
+04-12-16,WILSONS GROUP OF COMPANIES NISSAN,1268.20,United Kingdom,Transportation,Auto Services
+06-12-16,MERCURE PARIS OPERA GDS BLDS,193.37,France,Travel,Lodging
+07-12-16,WILSONS GROUP OF COMPANIES NISSAN,17274.68,United Kingdom,Transportation,Auto Services
+09-12-16,DELTA AIR LINES,11.20,United States,Travel,Airline
+10-12-16,PODS #50,218.99,United States,Transportation,Other Transportation
+19-12-16,BA.COM UK,68.52,United Kingdom,Travel,Airline
+19-12-16,STRIPE,374.04,United States,Merchandise & Supplies,Internet Purchase
+20-12-16,AMAZON MARKEPLACE NA,18.20,United States,Merchandise & Supplies,Internet Purchase
+20-12-16,HERTZ RAC FIREFLY,659.05,United States,Travel,Vehicle Rental
+22-12-16,UBER,7.42,United States,Transportation,Taxis & Coach
+22-12-16,UBER,24.64,United States,Transportation,Taxis & Coach
+23-12-16,UBER,-6.50,United States,Transportation,Taxis & Coach
+24-12-16,DOUBLETREE BY HILTON,106.18,United States,Travel,Lodging
+28-12-16,AMC STUBS REWARD PROGRAM,62.90,United States,Entertainment,Theatrical Events
+30-12-16,HILTON LV52 COND HOA,1038.96,United States,Travel,Lodging
