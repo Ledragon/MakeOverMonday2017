@@ -31,6 +31,7 @@ function controller(csvService: ICsvService) {
     csvService.read<any>(fileName, update, parse);
 
     function update(data: Array<IDataFormat>) {
+        data = data.filter(d => d.amount > 0);
         updateChart(chartByCountry, data, d => d.country);
         updateChart(chartByCategory, data, d => d.category);
         updateChart(chartByMerchant, data, d => d.merchant);
