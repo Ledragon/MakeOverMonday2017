@@ -27,6 +27,7 @@ html,body{
 ui-view, :host, .flex-container{
     display: flex;
     flex-grow:1;
+    overflow: hidden;
 }
 #menu{
     flex-grow: 0; 
@@ -43,6 +44,25 @@ ui-view, :host, .flex-container{
 .menu-item.highlight{
     border: 1px solid wheat;
 }
+
+.flex-box{
+    flex-grow:1; 
+    flex-shrink:0;
+    overflow: hidden;
+}
+.flex-33{
+    flex-basis:33.33%;
+}
+.flex-66{
+    flex-basis:66.66%;
+}
+.flex-50{
+    flex-basis: 50%;
+}
+.flex-100{
+    flex-basis: 100%;
+}
+
 
 .chart-title text{
     text-anchor: middle;
@@ -170,7 +190,9 @@ ui-view, :host, .flex-container{
     stroke:#F9ECCC;
 }
 
-
+.mom-09{
+    overflow:  hidden;
+}
 
 /*************************/
 .track, .track-inset{
