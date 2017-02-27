@@ -2,6 +2,7 @@ import * as d3 from 'd3';
 import { interpolateGreens } from 'd3-scale-chromatic';
 import { ICsvService } from '../../../services/csvService';
 import { HorizontalBarChart } from 'ldd3';
+import { Map } from './Map';
 
 export var mom09 = {
     name: 'mom09',
@@ -21,22 +22,26 @@ function controller(csvService: ICsvService) {
         right: 30
     };
     var colorScale = d3.scaleLinear()
-        .range([1,0]);
-    var chartByCountry = getBarChart('map', 'Spendings by country', (d: IDataFormat) => interpolateGreens(colorScale(d.amount)));
+        .range([1, 0]);
+    // var chartByCountry = getBarChart('map', 'Spendings by country', (d: IDataFormat) => interpolateGreens(colorScale(d.amount)));
     var chartByCategory = getBarChart('byCategory', 'Spendings by category', (d: IDataFormat) => interpolateGreens(colorScale(d.amount)));
     var chartByMerchant = getBarChart('byMerchant', 'Spendings by merchant', (d: IDataFormat) => interpolateGreens(colorScale(d.amount)));
     var chartBySubCategory = getBarChart('bySubCategory', 'Spendings by sub-category (Transportation)', (d: IDataFormat) => interpolateGreens(colorScale(d.amount)));
 
+    var node = (<any>d3.select('#' + 'map').node()).getBoundingClientRect();
+
+    var map = new Map('#map', node.width, node.height)
+        .key((d, p) => p.properties.name === d.country);
     const fileName = 'components/challenges/09/data/data.csv';
     csvService.read<any>(fileName, update, parse);
 
     function update(data: Array<IDataFormat>) {
         data = data.filter(d => d.amount > 0);
-        updateChart(chartByCountry, data, d => d.country);
+        // updateChart(chartByCountry, data, d => d.country);
         updateChart(chartByCategory, data, d => d.category);
         updateChart(chartByMerchant, data, d => d.merchant);
         var bc = d3.nest<IDataFormat>()
-            .key(d=>d.category)
+            .key(d => d.category)
             .entries(data)
             .map((d: any) => {
                 d.amount = d3.sum(d.values, (v: IDataFormat) => v.amount);
@@ -46,7 +51,10 @@ function controller(csvService: ICsvService) {
             .values;
         updateChart(chartBySubCategory, bc, d => d.subCategory);
 
-        
+        var byCountry = d3.nest<IDataFormat>()
+            .key(d => d.country)
+            .entries(data);
+        map.update(byCountry);
 
         // let byCategory = d3.nest<IDataFormat>()
         //     .key(d => d.category)
@@ -82,7 +90,7 @@ function controller(csvService: ICsvService) {
         };
     }
 
-    function updateChart(chart:HorizontalBarChart<any>, data: Array<IDataFormat>, callback: (d:IDataFormat)=>string): void{
+    function updateChart(chart: HorizontalBarChart<any>, data: Array<IDataFormat>, callback: (d: IDataFormat) => string): void {
         let byCountry = d3.nest<IDataFormat>()
             .key(callback)
             .entries(data)
