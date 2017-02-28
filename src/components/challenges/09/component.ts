@@ -1,5 +1,5 @@
 import * as d3 from 'd3';
-import { interpolateGreens } from 'd3-scale-chromatic';
+import { interpolateGreens, interpolateReds, interpolateBlues } from 'd3-scale-chromatic';
 import { ICsvService } from '../../../services/csvService';
 import { HorizontalBarChart } from 'ldd3';
 import { Map } from './Map';
@@ -22,11 +22,12 @@ function controller(csvService: ICsvService) {
         right: 30
     };
     var colorScale = d3.scaleLinear()
-        .range([1, 0]);
+        .range([0,1]);
     // var chartByCountry = getBarChart('map', 'Spendings by country', (d: IDataFormat) => interpolateGreens(colorScale(d.amount)));
-    var chartByCategory = getBarChart('byCategory', 'Spendings by category', (d: IDataFormat) => interpolateGreens(colorScale(d.amount)));
-    var chartByMerchant = getBarChart('byMerchant', 'Spendings by merchant', (d: IDataFormat) => interpolateGreens(colorScale(d.amount)));
-    var chartBySubCategory = getBarChart('bySubCategory', 'Spendings by sub-category (Transportation)', (d: IDataFormat) => interpolateGreens(colorScale(d.amount)));
+    var interpolateColor = interpolateBlues;
+    var chartByCategory = getBarChart('byCategory', 'Spendings by category', (d: IDataFormat) => interpolateColor(colorScale(d.amount)));
+    var chartByMerchant = getBarChart('byMerchant', 'Spendings by merchant', (d: IDataFormat) => interpolateColor(colorScale(d.amount)));
+    var chartBySubCategory = getBarChart('bySubCategory', 'Spendings by sub-category (Transportation)', (d: IDataFormat) => interpolateColor(colorScale(d.amount)));
 
     var node = (<any>d3.select('#' + 'map').node()).getBoundingClientRect();
 
@@ -53,30 +54,17 @@ function controller(csvService: ICsvService) {
 
         var byCountry = d3.nest<IDataFormat>()
             .key(d => d.country)
-            .entries(data);
-        map.update(byCountry);
+            .entries(data)
+            .map((d: any) => {
+                return {
+                    key: d.key,
+                    amount: d3.sum(d.values, (v: any) => v.amount)
+                }
+            })
+            .sort((a, b) => b.amount - a.amount);
+        colorScale.domain(d3.extent(byCountry, d => d.amount));
 
-        // let byCategory = d3.nest<IDataFormat>()
-        //     .key(d => d.category)
-        //     .entries(data).map((d: { key: string, values: Array<IDataFormat> }) => {
-        //         return {
-        //             key: d.key,
-        //             amount: d3.sum(d.values, v => v.amount)
-        //         }
-        //     })
-        //     .sort((a, b) => b.amount - a.amount);
-        // chartByCategory.update(byCategory);
-
-        // let byMerchant = d3.nest<IDataFormat>()
-        //     .key(d => d.merchant)
-        //     .entries(data).map((d: { key: string, values: Array<IDataFormat> }) => {
-        //         return {
-        //             key: d.key,
-        //             amount: d3.sum(d.values, v => v.amount)
-        //         }
-        //     })
-        //     .sort((a, b) => b.amount - a.amount);
-        // chartByMerchant.update(byMerchant);
+        map.update(byCountry, (d: any) => interpolateColor(colorScale(d.amount)));
     };
 
     function parse(d: any): IDataFormat {
