@@ -1,4 +1,5 @@
 import * as d3 from 'd3';
+import { world } from './data/world';
 export class Map {
     private _key: (d: any, p: any) => boolean;
     private _group: d3.Selection<any, any, any, any>;
@@ -13,20 +14,14 @@ export class Map {
         let pathGenerator = d3.geoPath()
             .projection(projection);
         this._group = group;
-        d3.json('components/challenges/09/data/world.json', (error, world: any) => {
-            if (error) {
-                console.error(error);
-            } else {
-                projection.fitSize([width, height], world);
-                group
-                    .selectAll('path')
-                    .data(world.features)
-                    .enter()
-                    .append('path')
-                    .classed('country', true)
-                    .attr('d', (d: any) => pathGenerator(d));
-            }
-        });
+        projection.fitSize([width, height], world);
+        group
+            .selectAll('path')
+            .data(world.features)
+            .enter()
+            .append('path')
+            .classed('country', true)
+            .attr('d', (d: any) => pathGenerator(d));
     }
 
     key(value: (d: any, p: any) => boolean): Map {
