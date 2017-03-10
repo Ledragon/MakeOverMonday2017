@@ -22,7 +22,7 @@ export class MultiCategoricalChart<T> {
             right: 210
         };
         var container = GetContainer(selector, _width, _height, plotMargins);
-        this._group = container.group();
+        this._group = <any>container.group();
         this._xAxis = new BottomCategoricalAxis<T>(this._group, container.width(), container.height())
             .padding(0.3);
         this._yAxis = new LeftLinearAxis<T>(this._group, container.width(), container.height());
@@ -35,7 +35,7 @@ export class MultiCategoricalChart<T> {
             .append('g')
             .classed('legend-container', true)
             .attr('transform', `translate(${container.width() + plotMargins.left+plotMargins.right},${container.height()/2})`);
-        this._legend = new Legend<string>(legendContainer, container.width(), container.height())
+        this._legend = new Legend<string>(<any>legendContainer, container.width(), container.height())
             .color((d, i) => this._colorScale[i])
             .label(d => d);
         this._title = new title(container.parent(), _width, _height);
