@@ -14,7 +14,9 @@ function controller(csvService: ICsvService) {
 
     var scatter = new LinearLinearChart<any>('chart', 720, 720)
         .x(d => d.videoViews)
+        .xFormat('.2g')
         .y(d => d.subscribers)
+        .yFormat('.2g')
         .hasLine(false)
         .hasPoints(true);
 
@@ -29,11 +31,8 @@ function controller(csvService: ICsvService) {
         let xDomain = [0, d3.max(data, d => d.videoViews)] as [number, number];
         let yDomain = [0, d3.max(data, d => d.subscribers)] as [number, number];
         colorScale.domain(data.map(d => d.rating));
-        // console.log(colorScale.domain());
         scatter.update(data, xDomain, yDomain);
         let chart = d3.select('#chart');
-        // chart.select('svg')
-        //     .style('background', '#110b11');
         let red = '#69140e';
         chart.selectAll('.domain')
             .style('stroke', red);
