@@ -32,14 +32,17 @@ function controller(csvService: ICsvService) {
         // console.log(colorScale.domain());
         scatter.update(data, xDomain, yDomain);
         let chart = d3.select('#chart');
-        chart.select('svg')
-            .style('background', '#110b11');
+        // chart.select('svg')
+        //     .style('background', '#110b11');
+        let red = '#69140e';
+        chart.selectAll('.domain')
+            .style('stroke', red);
         var ticks = chart
             .selectAll('.tick');
         ticks.select('text')
-            .attr('fill', '#69140e');
+            .attr('fill', red);
         ticks.select('line')
-            .attr('stroke', '#69140e');
+            .attr('stroke', red);
     };
 
     function parse(d: any): any {
