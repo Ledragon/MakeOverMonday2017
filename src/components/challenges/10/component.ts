@@ -18,28 +18,32 @@ function controller(csvService: ICsvService) {
         .y(d => d.subscribers)
         .yFormat('.2g')
         .hasLine(false)
-        .hasPoints(true);
-
+        .hasPoints(true)
+        .title('Number of subscribers vs number of views');
+    var ratings = ['A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D', 'D-'];
     const fileName = 'components/challenges/10/data/data.csv';
     csvService.read<any>(fileName, update, parse);
-    let max = 10;
+    let max = ratings.length + 1;
     let linearColor = d3.scaleLinear<string>()
-    .interpolate(d3.interpolateHcl)    
+        .interpolate(d3.interpolateCubehelix)
         .domain([max, 1])
-        .range(['#C1CFDA', '#139A43'])
+        .range(['#EA638C', '#139A43'])
     let colorScale = d3.scaleOrdinal<string>()
+        .domain(ratings)
         .range(d3.range(1, max, 1).map(d => linearColor(d)));
     scatter.pointColor((d, i) => colorScale(d.rating));
 
     function update(data: Array<any>) {
         let xDomain = [0, d3.max(data, d => d.videoViews)] as [number, number];
         let yDomain = [0, d3.max(data, d => d.subscribers)] as [number, number];
-        colorScale.domain(data.map(d => d.rating).sort());
         scatter.update(data, xDomain, yDomain);
         let chart = d3.select('#chart');
-        let red = '#69140e';
+        let red = '#DB162F';
         chart.selectAll('.domain')
             .style('stroke', red);
+        chart.select('.chart-title')
+            .select('text')
+            .style('fill', red);
         var ticks = chart
             .selectAll('.tick');
         ticks.select('text')
@@ -49,12 +53,20 @@ function controller(csvService: ICsvService) {
         let svg = chart.append('svg')
             .attr('width', 250)
             .attr('height', 720)
-            .style('background', 'white');
-        var gs = svg.selectAll('.legend-item')
+        // .style('background', 'white');
+        var legend = svg
+            .append('g')
+            .classed('legend', true)
+            .attr('transform', (d, i) => `translate(${0},${360 - (ratings.length * 20) / 2})`);
+        legend.append('text')
+            .attr('fill', red)
+            .text('Ratings:')
+        var gs = legend
+            .selectAll('.legend-item')
             .data(colorScale.domain())
             .enter()
             .append('g')
-            .attr('transform', (d, i) => `translate(${10},${i * 20+10})`);
+            .attr('transform', (d, i) => `translate(${10},${i * 20 + 10})`);
         gs.append('rect')
             .attr('width', 10)
             .attr('height', 10)
@@ -62,6 +74,7 @@ function controller(csvService: ICsvService) {
         gs.append('text')
             .attr('x', 20)
             .attr('y', 10)
+            .style('fill', (d, i) => colorScale(d))
             .text(d => d)
     };
 
