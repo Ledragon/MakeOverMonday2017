@@ -1,0 +1,7 @@
+Type,Gender,Likelihood
+heterosexual,women,0.65
+bisexual,women,0.66
+homosexual,women,0.86
+bisexual,men,0.88
+homosexual,men,0.89
+heterosexual,men,0.95
