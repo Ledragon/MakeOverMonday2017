@@ -16,7 +16,6 @@ function controller(csvService: ICsvService) {
     csvService.read<any>(fileName, update);
 
     function update(data: Array<any>) {
-        console.log(data);
         let filtered = data.filter(d => d.Region.indexOf('Total') === 0)
             .filter(d => d.Year === '2013' || d.Year === '2014' || d.Year === '2015');
         let byType = d3.nest<any>()
