@@ -5,7 +5,7 @@ var mom12State = {
     template: '<mom12 class=\"flex-container\"></mom12>',
     url: '/mom12',
     data: {
-        description: ''
+        description: 'March Madness'
     }
 };
 
