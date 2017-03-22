@@ -34,6 +34,8 @@ function controller(csvService: ICsvService) {
     scatter.pointColor((d, i) => colorScale(d.rating));
 
     function update(data: Array<any>) {
+        // console.log(JSON.stringify(data));
+
         let xDomain = [0, d3.max(data, d => d.videoViews)] as [number, number];
         let yDomain = [0, d3.max(data, d => d.subscribers)] as [number, number];
         scatter.update(data, xDomain, yDomain);
