@@ -12,17 +12,22 @@ export var mom12 = {
 function controller(csvService: ICsvService) {
 
     const height = 720;
-    const width = 1200;
+    const width = 1440;
     let svg = d3.select('#chart')
         .append('svg')
         .attr('width', width)
         .attr('height', height);
 
+    svg.append('text')
+        .classed('title', true)
+        .text('Win/Loss according to seed over the years')
+          .attr('transform', (d, i) => `translate(${width/2},${25})`);
+
     let plotMargins = {
-        top: 30,
+        top: 60,
         bottom: 30,
         left: 150,
-        right: 30
+        right: 90
     };
     let plotGroup = svg.append('g')
         .classed('plot', true)
@@ -31,6 +36,13 @@ function controller(csvService: ICsvService) {
     let plotWidth = width - plotMargins.left - plotMargins.right;
     let plotHeight = height - plotMargins.top - plotMargins.bottom;
 
+    let legend = svg.append('g')
+        .classed('legend', true);
+        
+    legend.append('text')
+        .attr('transform', (d, i) => `translate(${0},${-10})`)
+        .style('font-size', '1em')
+        .text('Seed:');
     let colorScale = d3.scaleLinear<any, any>()
         .interpolate(d3.interpolateRgb)
         .range(['#191308', '#677DB7']);
@@ -42,6 +54,7 @@ function controller(csvService: ICsvService) {
         let seeds = data.map(d => d.winningSeed)
             .concat(data.map(d => d.losingSeed))
             .sort();
+        let staticRounds = ["Opening Round", "Round of 64", "Round of 32", "Sweet Sixteen", "Elite Eight", "National Semifinals", "National Championship"]
         let rounds = data.map(d => d.round);
         let years = data.map(d => (<Date>d.date).getFullYear());
         let byYear = d3.nest<any>()
@@ -49,7 +62,6 @@ function controller(csvService: ICsvService) {
             .key(d => d.round)
             .entries(data);
         colorScale.domain(d3.extent(seeds));
-        console.log(colorScale(5))
 
         let scale = d3.scaleBand()
             .domain(years.map(d => d.toString()))
@@ -57,10 +69,9 @@ function controller(csvService: ICsvService) {
         let axis = d3.axisBottom(scale);
 
         let yScale = d3.scaleBand()
-            .domain(rounds)
+            .domain(staticRounds)
             .range([plotHeight, 0]);
         let yAxis = d3.axisLeft(yScale);
-
         plotGroup.selectAll('line.bg')
             .data(yScale.domain())
             .enter()
@@ -70,13 +81,7 @@ function controller(csvService: ICsvService) {
             .attr('y1', d => yScale(d))
             .attr('y2', d => yScale(d))
             .attr('x2', plotWidth - 1)
-            // .attr('height', yScale.bandwidth())
-            // .style('fill', 'none')
-            // .style('stroke', (d, i) => {
-            //     return i % 2 === 0 ? '#9CA3DB' : 'white'
-            // })
-            .style('stroke', '#9CA3DB')
-            // .style('opacity', '0.1');
+            .style('stroke', '#9CA3DB');
 
         let axisGroup = plotGroup.append('g')
             .classed('axis', true)
@@ -109,10 +114,6 @@ function controller(csvService: ICsvService) {
             .append('g')
             .classed('round', true)
             .attr('transform', (d: any, i) => `translate(${0},${yScale(d.key)})`);
-        // enterRounds.append('rect')
-        //     .attr('height', yScale.bandwidth())
-        //     .attr('width', plotWidth)
-        //     .style('fill', (d, i) => i % 2 === 0 ? '#eee' : 'white');
         const r = scale.bandwidth() / 4;
 
         var match = enterRounds.selectAll('.match')
@@ -129,13 +130,9 @@ function controller(csvService: ICsvService) {
         enterCircle.append('circle')
             .classed('winning-seed', true)
             .attr('cx', scale.bandwidth() / 3)
-            // .attr('cy', (d,i)=>i*5)
             .attr('r', r)
-            // .attr('y', (d,i)=>)
             .style('fill', (d: any) => {
-                // console.log(d);
                 let color = colorScale(d.winningSeed)
-                // console.log(color);
                 return color;
             });
         enterCircle.append('circle')
@@ -143,15 +140,25 @@ function controller(csvService: ICsvService) {
             .attr('r', r)
             .attr('cx', scale.bandwidth() / 3 * 2)
             .style('fill', (d: any) => {
-                // console.log(d);
                 let color = colorScale(d.losingSeed)
-                // console.log(color);
                 return color;
             });
-        // enterSelection.append('circle')
-        //     .attr('r', scale.bandwidth() / 4)
-        //     .style('fill', d=>colorScale())
-        //     ;
+        let range = d3.range(colorScale.domain()[0], colorScale.domain()[1], 1);
+        var legendItems = legend.selectAll('.legend-item')
+            .data(range)
+            .enter()
+            .append('g')
+            .classed('legend-item', true)
+            .attr('transform', (d, i) => `translate(${5},${i * 15})`);
+        legendItems.append('rect')
+            .attr('width', 10)
+            .attr('height', 10)
+            .style('fill', d => colorScale(d));
+        legendItems.append('text')
+            .attr('x', 15)
+            .attr('y', 10)
+            .text(d => d);
+        legend.attr('transform', (d, i) => `translate(${plotWidth + plotMargins.left + 20},${height / 2-range.length*15/2})`);
     };
 
     function parse(d: any): any {
