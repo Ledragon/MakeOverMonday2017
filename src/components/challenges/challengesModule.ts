@@ -12,6 +12,8 @@ import { register as register09 } from './09/state';
 import { register as register10 } from './10/state';
 import { register as register11 } from './11/state';
 import { register as register12 } from './12/state';
+import { register as register13 } from './13/state';
+import { register as register14 } from './14/state';
 let momModule = angular.module('momModule', []);
 register01(momModule);
 register02(momModule);
@@ -23,8 +25,10 @@ register07(momModule);
 register08(momModule);
 register09(momModule);
 register10(momModule);
-register12(momModule);
 register11(momModule);
+register12(momModule);
+register13(momModule);
+register14(momModule);
 
 export const momName = momModule
     .config(($stateProvider: angular.ui.IStateProvider, $urlRouterProvider: angular.ui.IUrlRouterProvider) => {

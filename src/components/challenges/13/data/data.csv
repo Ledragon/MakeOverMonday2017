@@ -1,0 +1,25 @@
+Social Strata,Reason,Rate
+Rich people,"good education, high qualification",0.28
+Middle class,"good education, high qualification",0.33
+Poor,"good education, high qualification",0.18
+Rich people,"cunning, cheating",0.11
+Middle class,"cunning, cheating",0.21
+Poor,"cunning, cheating",0.32
+Rich people,"abilities, talents",0.13
+Middle class,"abilities, talents",0.08
+Poor,"abilities, talents",0.07
+Rich people,connections to the right people,0.09
+Middle class,connections to the right people,0.32
+Poor,connections to the right people,0.39
+Rich people,"fortune, good luck",0.13
+Middle class,"fortune, good luck",0.15
+Poor,"fortune, good luck",0.12
+Rich people,hard work,0.38
+Middle class,hard work,0.27
+Poor,hard work,0.16
+Rich people,"entreprenurial spirit, courage",0.27
+Middle class,"entreprenurial spirit, courage",0.16
+Poor,"entreprenurial spirit, courage",0.16
+Rich people,presence of initial capital,0.15
+Middle class,presence of initial capital,0.23
+Poor,presence of initial capital,0.27
