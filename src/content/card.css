@@ -8,6 +8,7 @@
 .flex-fixed{
     flex-grow:0;
     flex-shrink:0;
+    overflow: hidden;
 }
 .card{
     height: 180px;

@@ -1,17 +1,16 @@
 <div class="gallery-container">
-    <div ng-repeat="item in $ctrl.list"
-    class="flex-2 flex-fixed gallery-item">
+    <div ng-repeat="item in $ctrl.list" class="flex-2 flex-fixed gallery-item">
         <div class="card">
-            <a ui-sref="{{item.name}}"> 
-                <div class="card-header">
-                    <span>
+            <a ui-sref="{{item.name}}">
+                <div class="card-header" style="overflow:hidden">
+                    <span style="white-space:nowrap; text-overflow:ellipsis;">
                     {{item.displayName}}: {{item.description}}
                     </span>
                 </div>
                 <div class="card-body">
-                    <img ng-src="{{item.url}}" style="width: 150px; height:100%;"/>
+                    <img ng-src="{{item.url}}" style="width: 150px; height:100%;" />
                 </div>
             </a>
         </div>
-    </div>  
+    </div>
 </div>
