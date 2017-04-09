@@ -5,7 +5,7 @@ var mom14State = {
     template: '<mom14 class=\"flex-container\"></mom14>',
     url: '/mom14',
     data: {
-        description: ''
+        description: 'Millions of UK workers at risk of being replaced by robots'
     }
 };
 
