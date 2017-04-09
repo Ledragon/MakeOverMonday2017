@@ -28,7 +28,7 @@ function controller(csvService: ICsvService) {
         .attr('height', height);
 
     let plotMargins = {
-        top: 30,
+        top: 60,
         bottom: 30,
         left: 210,
         right: 30
@@ -36,9 +36,14 @@ function controller(csvService: ICsvService) {
     let plotGroup = svg.append('g')
         .classed('plot', true)
         .attr('transform', `translate(${plotMargins.left},${plotMargins.top})`);
-
     let plotWidth = width - plotMargins.left - plotMargins.right;
     let plotHeight = height - plotMargins.top - plotMargins.bottom;
+
+    svg.append('g')
+        .classed('title', true)
+        .attr('transform', (d, i) => `translate(${plotMargins.left + plotWidth / 2},${30})`)
+        .append('text')
+        .text('Risk of job automation by industry');
     let xScale = d3.scaleLinear()
         .domain([0, 1])
         .range([0, plotWidth]);
@@ -53,6 +58,40 @@ function controller(csvService: ICsvService) {
     let yAxis = d3.axisLeft(yScale);
     let yAxisGroup = plotGroup.append('g')
         .classed('axis', true);
+
+
+    const legendWidth = 120;
+    const legendHeight = 50;
+    let legend = svg.append('g')
+        .classed('legend', true)
+        .attr('transform', `translate(${width - legendWidth - plotMargins.right},${height - legendHeight - plotMargins.bottom})`);
+    legend.append('rect')
+        .attr('width', legendWidth)
+        .attr('height', legendHeight);
+
+    let colorScale = d3.scaleOrdinal<string>()
+        .domain(['Employment share', '% of jobs at risk'])
+        .range(['green', 'red']);
+
+    var legendItems = legend.selectAll('.legend-item')
+        .data(colorScale.domain());
+    legendItems
+        .exit()
+        .remove();
+    var enterLegend = legendItems
+        .enter()
+        .append('g')
+        .classed('legend-item', true)
+        .attr('transform', (d, i) => `translate(${0},${i * 22 + 7})`);
+    enterLegend.append('rect')
+        .attr('x', 5)
+        .attr('width', 10)
+        .attr('height', 10)
+        .style('fill', d => colorScale(d));
+    enterLegend.append('text')
+        .attr('x', 20)
+        .attr('y', 10)
+        .text(d => d);
 
     function update(data: Array<any>) {
         let byAmount = data.sort((a, b) => b.share - a.share);
@@ -71,12 +110,15 @@ function controller(csvService: ICsvService) {
             .attr('transform', (d, i) => `translate(${0},${yScale(d.industry)})`);
         let bandWidth = yScale.bandwidth();
         enterSelection.append('rect')
+            .transition()
             .attr('width', d => xScale(d.share))
             .attr('height', bandWidth)
-            .style('fill', 'green');
-        enterSelection.append('rect')
+            .style('fill', colorScale.range()[0]);
+        enterSelection
+            .append('rect')
+            .transition()
             .attr('width', d => xScale(d.share * d.automation))
             .attr('height', bandWidth)
-            .style('fill', 'red')
+            .style('fill', colorScale.range()[1])
     };
 }
