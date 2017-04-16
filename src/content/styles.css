@@ -226,3 +226,9 @@ ui-view, :host, .flex-container{
     stroke: #000;
     stroke-opacity: 0.3;
 }
+.axis-title text{
+    font-size:.7em;
+    text-anchor: middle;
+    text-transform: uppercase;
+    font-weight: bold;
+}

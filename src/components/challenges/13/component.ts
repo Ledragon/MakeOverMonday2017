@@ -113,7 +113,7 @@ function controller(csvService: ICsvService) {
             .key(d => d.strata)
             .entries(data);
 
-        let generator = d3.area<any>()
+        let generator = d3.line<any>()
             .x((d, i) => {
                 var res = Math.cos(i * Math.PI * 2 / filtered.length) * valuesScale(d.rate);
                 return res;
@@ -134,6 +134,10 @@ function controller(csvService: ICsvService) {
         enterSeries.append('path')
             .attr('d', d => generator(d.values))
             .style('fill', d => colorScale(d.key))
+            .style('opacity', 0.5);
+        enterSeries.append('path')
+            .attr('d', d => generator(d.values))
+            .style('fill','none')
             .style('stroke', d => colorScale(d.key));
 
         let legendEnter = legend.selectAll('.legend-item')
