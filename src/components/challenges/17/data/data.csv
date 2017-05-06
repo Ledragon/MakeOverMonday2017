@@ -1,0 +1,799 @@
+Skill,Country,Year,Rank
+Algorithm Design,Australia,2015,13
+Algorithm Design,Australia,2016,9
+Business Intelligence,Australia,2014,6
+Business Intelligence,Australia,2015,21
+C/C++,Australia,2014,17
+Channel Marketing,Australia,2015,19
+Clinical Research and Trials,Australia,2015,24
+Computer Graphics and Animation,Australia,2014,13
+Corporate Law and Governance,Australia,2015,7
+Corporate Law and Governance,Australia,2016,10
+Data Engineering and Data Warehousing,Australia,2014,15
+Data Engineering and Data Warehousing,Australia,2015,17
+Database Management and Software,Australia,2014,24
+Economics,Australia,2014,21
+Electronic and Electrical Engineering,Australia,2015,23
+Foreign Language Translation,Australia,2014,23
+HR Benefits and Compensation,Australia,2014,16
+HR Benefits and Compensation,Australia,2015,6
+HR Benefits and Compensation,Australia,2016,4
+Java Development,Australia,2014,11
+Java Development,Australia,2015,11
+"Mac, Linux and Unix Systems",Australia,2014,22
+"Mac, Linux and Unix Systems",Australia,2015,14
+Marketing Campaign Management,Australia,2014,19
+Marketing Campaign Management,Australia,2015,15
+Middleware and Integration Software,Australia,2014,2
+Middleware and Integration Software,Australia,2015,2
+Middleware and Integration Software,Australia,2016,3
+Mobile Development,Australia,2014,7
+Mobile Development,Australia,2015,5
+Mobile Development,Australia,2016,6
+Network and Information Security,Australia,2014,9
+Network and Information Security,Australia,2015,4
+Network and Information Security,Australia,2016,5
+"Non-Profit, Fundraising, and Grantmaking",Australia,2014,12
+Perl/Python/Ruby,Australia,2014,8
+Perl/Python/Ruby,Australia,2015,10
+Public Policy and International Relations,Australia,2015,22
+Recruiting,Australia,2014,10
+Recruiting,Australia,2015,20
+SAP ERP Systems,Australia,2014,3
+SAP ERP Systems,Australia,2015,12
+SEO/SEM Marketing,Australia,2014,5
+SEO/SEM Marketing,Australia,2015,3
+SEO/SEM Marketing,Australia,2016,2
+Shell Scripting Languages,Australia,2015,25
+Social Media Marketing,Australia,2014,25
+Software QA and User Testing,Australia,2014,20
+Software QA and User Testing,Australia,2015,18
+Statistical Analysis and Data Mining,Australia,2014,1
+Statistical Analysis and Data Mining,Australia,2015,1
+Statistical Analysis and Data Mining,Australia,2016,1
+Storage Systems and Management,Australia,2014,4
+Storage Systems and Management,Australia,2015,8
+User Interface Design,Australia,2014,18
+User Interface Design,Australia,2015,9
+User Interface Design,Australia,2016,7
+Web Architecture and Development Framework,Australia,2014,14
+Web Architecture and Development Framework,Australia,2015,16
+Web Architecture and Development Framework,Australia,2016,8
+"Automotive Services, Parts and Design",Brazil,2014,23
+Business Development and Relationship Management,Brazil,2015,21
+Business Development and Relationship Management,Brazil,2016,6
+Business Intelligence,Brazil,2014,8
+Business Intelligence,Brazil,2015,14
+Corporate Law and Governance,Brazil,2015,10
+Data Engineering and Data Warehousing,Brazil,2014,10
+Data Engineering and Data Warehousing,Brazil,2015,7
+Database Management and Software,Brazil,2014,25
+Digital and Online Marketing,Brazil,2014,14
+Digital and Online Marketing,Brazil,2015,23
+HR Benefits and Compensation,Brazil,2014,24
+HR Benefits and Compensation,Brazil,2015,9
+HR Benefits and Compensation,Brazil,2016,4
+IBM Mainframes and Systems,Brazil,2014,22
+Integrated Circuit (IC) Design,Brazil,2014,13
+Java Development,Brazil,2014,17
+Java Development,Brazil,2015,20
+Materials Engineering,Brazil,2015,18
+Microsoft Application Development,Brazil,2014,21
+Microsoft Application Development,Brazil,2015,13
+Microsoft Windows Systems,Brazil,2014,19
+Middleware and Integration Software,Brazil,2014,4
+Middleware and Integration Software,Brazil,2015,8
+Middleware and Integration Software,Brazil,2016,8
+Mobile Development,Brazil,2014,11
+Mobile Development,Brazil,2015,2
+Mobile Development,Brazil,2016,3
+Network and Information Security,Brazil,2014,6
+Network and Information Security,Brazil,2016,10
+Perl/Python/Ruby,Brazil,2014,15
+Perl/Python/Ruby,Brazil,2015,19
+Public Policy and International Relations,Brazil,2015,17
+Recruiting,Brazil,2014,2
+Recruiting,Brazil,2015,16
+Shell Scripting Languages,Brazil,2014,18
+Shell Scripting Languages,Brazil,2015,25
+Social Media Marketing,Brazil,2014,9
+Social Media Marketing,Brazil,2015,22
+Software Modeling and Process Design,Brazil,2014,20
+Software QA and User Testing,Brazil,2014,12
+Software QA and User Testing,Brazil,2015,3
+Software QA and User Testing,Brazil,2016,7
+Software Revision Control Systems,Brazil,2014,7
+Software Revision Control Systems,Brazil,2015,15
+Statistical Analysis and Data Mining,Brazil,2014,1
+Statistical Analysis and Data Mining,Brazil,2015,1
+Statistical Analysis and Data Mining,Brazil,2016,1
+Storage Systems and Management,Brazil,2014,5
+Storage Systems and Management,Brazil,2015,4
+Storage Systems and Management,Brazil,2016,5
+User Interface Design,Brazil,2014,16
+User Interface Design,Brazil,2015,12
+User Interface Design,Brazil,2016,9
+Web Architecture and Development Framework,Brazil,2014,3
+Web Architecture and Development Framework,Brazil,2015,5
+Web Architecture and Development Framework,Brazil,2016,2
+Workplace Safety,Brazil,2015,11
+Algorithm Design,Canada,2014,18
+Algorithm Design,Canada,2015,19
+Business Intelligence,Canada,2014,8
+Business Intelligence,Canada,2015,20
+C/C++,Canada,2014,5
+C/C++,Canada,2015,25
+Computer Graphics and Animation,Canada,2014,7
+Computer Graphics and Animation,Canada,2015,23
+Data Engineering and Data Warehousing,Canada,2014,17
+Data Engineering and Data Warehousing,Canada,2015,9
+Data Engineering and Data Warehousing,Canada,2016,6
+Data Presentation,Canada,2014,14
+Digital and Online Marketing,Canada,2014,11
+Economics,Canada,2014,16
+Economics,Canada,2015,24
+Electronic and Electrical Engineering,Canada,2014,23
+Electronic and Electrical Engineering,Canada,2015,16
+Foreign Language Translation,Canada,2014,22
+Integrated Circuit (IC) Design,Canada,2014,19
+Integrated Circuit (IC) Design,Canada,2015,22
+Java Development,Canada,2014,12
+Java Development,Canada,2015,10
+Java Development,Canada,2016,10
+"Mac, Linux and Unix Systems",Canada,2014,6
+"Mac, Linux and Unix Systems",Canada,2015,8
+Materials Engineering,Canada,2014,24
+Materials Engineering,Canada,2015,15
+Microsoft Application Development,Canada,2015,21
+Middleware and Integration Software,Canada,2014,3
+Middleware and Integration Software,Canada,2015,2
+Middleware and Integration Software,Canada,2016,2
+Mobile Development,Canada,2014,13
+Mobile Development,Canada,2015,6
+Mobile Development,Canada,2016,3
+Network and Information Security,Canada,2014,4
+Network and Information Security,Canada,2015,7
+Network and Information Security,Canada,2016,8
+Perl/Python/Ruby,Canada,2014,10
+Perl/Python/Ruby,Canada,2015,12
+Recruiting,Canada,2014,21
+SAP ERP Systems,Canada,2014,9
+SAP ERP Systems,Canada,2015,14
+Shell Scripting Languages,Canada,2015,13
+Social Media Marketing,Canada,2014,25
+Software Modeling and Process Design,Canada,2015,17
+Software QA and User Testing,Canada,2015,18
+Software Revision Control Systems,Canada,2015,4
+Software Revision Control Systems,Canada,2016,4
+Statistical Analysis and Data Mining,Canada,2014,1
+Statistical Analysis and Data Mining,Canada,2015,1
+Statistical Analysis and Data Mining,Canada,2016,1
+Storage Systems and Management,Canada,2014,2
+Storage Systems and Management,Canada,2015,3
+Storage Systems and Management,Canada,2016,5
+User Interface Design,Canada,2014,20
+User Interface Design,Canada,2015,11
+User Interface Design,Canada,2016,7
+Web Architecture and Development Framework,Canada,2014,15
+Web Architecture and Development Framework,Canada,2015,5
+Web Architecture and Development Framework,Canada,2016,9
+"Automotive Services, Parts and Design",China,2016,5
+Brand Strategy and Management,China,2015,24
+Business Intelligence,China,2015,12
+Business Intelligence,China,2016,8
+Channel Marketing,China,2015,10
+Cloud and Distributed Computing,China,2015,3
+Cloud and Distributed Computing,China,2016,4
+Computer Graphics and Animation,China,2015,25
+Corporate Law and Governance,China,2015,7
+Data Engineering and Data Warehousing,China,2015,14
+Database Management and Software,China,2015,19
+Digital and Online Marketing,China,2015,17
+Economics,China,2015,18
+"Mac, Linux and Unix Systems",China,2015,6
+"Mac, Linux and Unix Systems",China,2016,9
+Microsoft Application Development,China,2015,21
+Middleware and Integration Software,China,2015,13
+Network and Information Security,China,2015,1
+Network and Information Security,China,2016,2
+PR and Communications,China,2015,16
+Public Policy and International Relations,China,2015,5
+Public Policy and International Relations,China,2016,6
+Retail Store Operations,China,2015,9
+Social Media Marketing,China,2015,15
+Social Media Marketing,China,2016,7
+Statistical Analysis and Data Mining,China,2015,2
+Statistical Analysis and Data Mining,China,2016,3
+Storage Systems and Management,China,2015,8
+Storage Systems and Management,China,2016,10
+TV and Video Production,China,2015,23
+User Interface Design,China,2015,22
+Virtualization,China,2015,4
+Virtualization,China,2016,1
+Web Architecture and Development Framework,China,2015,11
+Writing and Publishing,China,2015,20
+Algorithm Design,France,2014,19
+"Automotive Services, Parts and Design",France,2014,22
+Business Intelligence,France,2014,7
+C/C++,France,2014,3
+Cloud and Distributed Computing,France,2014,2
+Cloud and Distributed Computing,France,2015,1
+Cloud and Distributed Computing,France,2016,1
+Compliance and Employment Law,France,2014,18
+Compliance and Employment Law,France,2015,8
+Compliance and Employment Law,France,2016,9
+Computer Graphics and Animation,France,2014,10
+Computer Graphics and Animation,France,2015,24
+Corporate Law and Governance,France,2014,9
+Corporate Law and Governance,France,2015,4
+Corporate Law and Governance,France,2016,4
+Data Engineering and Data Warehousing,France,2015,9
+Data Engineering and Data Warehousing,France,2016,8
+Data Presentation,France,2015,25
+Database Management and Software,France,2015,14
+Dispute Resolution Law,France,2014,6
+Economics,France,2014,14
+Economics,France,2015,18
+Financial Analysis and Modeling,France,2014,11
+Foreign Language Translation,France,2014,23
+Foreign Language Translation,France,2015,21
+IBM Mainframes and Systems,France,2014,5
+IBM Mainframes and Systems,France,2015,12
+Java Development,France,2014,25
+Marketing Campaign Management,France,2016,10
+Mathematics,France,2014,20
+Mechanical and Aerospace Engineering,France,2014,8
+Mechanical and Aerospace Engineering,France,2015,11
+Microsoft Application Development,France,2015,15
+Mobile Development,France,2014,16
+Mobile Development,France,2015,6
+Mobile Development,France,2016,7
+Perl/Python/Ruby,France,2014,21
+Perl/Python/Ruby,France,2015,13
+Public Policy and International Relations,France,2014,12
+Public Policy and International Relations,France,2015,19
+Recruiting,France,2014,17
+Recruiting,France,2015,20
+Restaurants and Catering,France,2015,23
+Retail Store Operations,France,2015,10
+SEO/SEM Marketing,France,2014,4
+SEO/SEM Marketing,France,2015,3
+SEO/SEM Marketing,France,2016,5
+Social Media Marketing,France,2014,13
+Social Media Marketing,France,2015,17
+Software QA and User Testing,France,2014,24
+Software QA and User Testing,France,2015,5
+Software QA and User Testing,France,2016,3
+Software Revision Control Systems,France,2014,15
+Software Revision Control Systems,France,2015,16
+Statistical Analysis and Data Mining,France,2014,1
+Statistical Analysis and Data Mining,France,2015,2
+Statistical Analysis and Data Mining,France,2016,2
+User Interface Design,France,2015,7
+User Interface Design,France,2016,6
+Web Architecture and Development Framework,France,2015,22
+"Automotive Services, Parts and Design",Germany,2015,15
+Business Intelligence,Germany,2015,25
+Channel Marketing,Germany,2015,8
+Channel Marketing,Germany,2016,10
+Cloud and Distributed Computing,Germany,2015,1
+Cloud and Distributed Computing,Germany,2016,1
+Corporate Law and Governance,Germany,2015,11
+Data Engineering and Data Warehousing,Germany,2015,9
+Data Engineering and Data Warehousing,Germany,2016,5
+Data Presentation,Germany,2015,23
+Database Management and Software,Germany,2015,7
+Database Management and Software,Germany,2016,6
+Electronic and Electrical Engineering,Germany,2015,2
+Electronic and Electrical Engineering,Germany,2016,9
+HR Benefits and Compensation,Germany,2015,14
+Java Development,Germany,2015,18
+"Mac, Linux and Unix Systems",Germany,2015,24
+Marketing Campaign Management,Germany,2016,4
+Mobile Development,Germany,2015,6
+Perl/Python/Ruby,Germany,2015,20
+Recruiting,Germany,2015,19
+Retail Store Operations,Germany,2015,10
+Retail Store Operations,Germany,2016,8
+SEO/SEM Marketing,Germany,2015,3
+SEO/SEM Marketing,Germany,2016,3
+Shell Scripting Languages,Germany,2015,22
+Social Media Marketing,Germany,2015,21
+Software Modeling and Process Design,Germany,2015,17
+Software QA and User Testing,Germany,2015,5
+Software QA and User Testing,Germany,2016,7
+Software Revision Control Systems,Germany,2015,12
+Statistical Analysis and Data Mining,Germany,2015,4
+Statistical Analysis and Data Mining,Germany,2016,2
+User Interface Design,Germany,2015,16
+Web Architecture and Development Framework,Germany,2015,13
+Algorithm Design,Global,2014,9
+Algorithm Design,Global,2015,12
+Business Intelligence,Global,2014,6
+Business Intelligence,Global,2015,18
+Channel Marketing,Global,2014,20
+Channel Marketing,Global,2015,16
+Cloud and Distributed Computing,Global,2015,1
+Cloud and Distributed Computing,Global,2016,1
+Computer Graphics and Animation,Global,2014,17
+Corporate Law and Governance,Global,2015,25
+Data Engineering and Data Warehousing,Global,2014,11
+Data Engineering and Data Warehousing,Global,2015,11
+Data Presentation,Global,2016,8
+Database Management and Software,Global,2015,21
+Digital and Online Marketing,Global,2014,16
+Economics,Global,2014,18
+Economics,Global,2015,24
+Electronic and Electrical Engineering,Global,2015,20
+Game Development,Global,2014,24
+Integrated Circuit (IC) Design,Global,2014,22
+Java Development,Global,2014,19
+Java Development,Global,2015,19
+"Mac, Linux and Unix Systems",Global,2014,13
+"Mac, Linux and Unix Systems",Global,2015,15
+Marketing Campaign Management,Global,2014,12
+Marketing Campaign Management,Global,2015,3
+Middleware and Integration Software,Global,2014,2
+Middleware and Integration Software,Global,2015,5
+Middleware and Integration Software,Global,2016,4
+Mobile Development,Global,2014,7
+Mobile Development,Global,2015,6
+Mobile Development,Global,2016,7
+Network and Information Security,Global,2014,4
+Network and Information Security,Global,2015,7
+Network and Information Security,Global,2016,6
+Perl/Python/Ruby,Global,2014,10
+Perl/Python/Ruby,Global,2015,13
+Recruiting,Global,2014,15
+SAP ERP Systems,Global,2014,21
+SEO/SEM Marketing,Global,2014,5
+SEO/SEM Marketing,Global,2015,4
+SEO/SEM Marketing,Global,2016,9
+Shell Scripting Languages,Global,2014,23
+Shell Scripting Languages,Global,2015,14
+Software Modeling and Process Design,Global,2015,22
+Software QA and User Testing,Global,2015,23
+Statistical Analysis and Data Mining,Global,2014,1
+Statistical Analysis and Data Mining,Global,2015,2
+Statistical Analysis and Data Mining,Global,2016,2
+Storage Systems and Management,Global,2014,3
+Storage Systems and Management,Global,2015,8
+Storage Systems and Management,Global,2016,10
+User Interface Design,Global,2014,14
+User Interface Design,Global,2015,10
+User Interface Design,Global,2016,5
+Virtualization,Global,2014,25
+Virtualization,Global,2015,17
+Web Architecture and Development Framework,Global,2014,8
+Web Architecture and Development Framework,Global,2015,9
+Web Architecture and Development Framework,Global,2016,3
+Algorithm Design,India,2014,7
+Algorithm Design,India,2015,5
+Algorithm Design,India,2016,6
+"Automotive Services, Parts and Design",India,2015,22
+Business Intelligence,India,2014,18
+Cloud and Distributed Computing,India,2014,3
+Cloud and Distributed Computing,India,2015,1
+Cloud and Distributed Computing,India,2016,1
+Corporate Law and Governance,India,2015,14
+Data Engineering and Data Warehousing,India,2014,19
+Data Engineering and Data Warehousing,India,2015,21
+Data Presentation,India,2014,12
+Data Presentation,India,2015,13
+Digital and Online Marketing,India,2014,17
+Digital and Online Marketing,India,2015,24
+Economics,India,2014,13
+Economics,India,2015,18
+Economics,India,2016,9
+Electronic and Electrical Engineering,India,2014,25
+Electronic and Electrical Engineering,India,2015,11
+Game Development,India,2014,20
+Game Development,India,2015,19
+"Mac, Linux and Unix Systems",India,2014,10
+"Mac, Linux and Unix Systems",India,2015,16
+Market Research and Insights,India,2014,22
+Middleware and Integration Software,India,2014,21
+Middleware and Integration Software,India,2015,23
+Military and Defense,India,2015,25
+Mobile Development,India,2014,14
+Mobile Development,India,2015,15
+Network and Information Security,India,2014,5
+Network and Information Security,India,2015,7
+Network and Information Security,India,2016,7
+Perl/Python/Ruby,India,2014,8
+Perl/Python/Ruby,India,2015,9
+PR and Communications,India,2014,4
+PR and Communications,India,2015,6
+PR and Communications,India,2016,8
+Public Policy and International Relations,India,2014,16
+Public Policy and International Relations,India,2015,12
+Public Policy and International Relations,India,2016,10
+SEO/SEM Marketing,India,2014,24
+Shell Scripting Languages,India,2014,23
+Shell Scripting Languages,India,2015,20
+Social Media Marketing,India,2014,6
+Social Media Marketing,India,2015,17
+Statistical Analysis and Data Mining,India,2014,1
+Statistical Analysis and Data Mining,India,2015,2
+Statistical Analysis and Data Mining,India,2016,5
+Storage Systems and Management,India,2014,2
+Storage Systems and Management,India,2015,3
+Storage Systems and Management,India,2016,4
+User Interface Design,India,2014,11
+User Interface Design,India,2015,4
+User Interface Design,India,2016,2
+Virtualization,India,2014,15
+Virtualization,India,2015,10
+Web Architecture and Development Framework,India,2014,9
+Web Architecture and Development Framework,India,2015,8
+Web Architecture and Development Framework,India,2016,3
+Algorithm Design,Ireland,2015,13
+Business Intelligence,Ireland,2015,24
+Cloud and Distributed Computing,Ireland,2015,1
+Cloud and Distributed Computing,Ireland,2016,1
+Data Engineering and Data Warehousing,Ireland,2015,7
+Data Presentation,Ireland,2015,12
+Database Management and Software,Ireland,2015,23
+Economics,Ireland,2015,21
+Electronic and Electrical Engineering,Ireland,2015,20
+HR Benefits and Compensation,Ireland,2015,22
+IBM Mainframes and Systems,Ireland,2015,9
+"Mac, Linux and Unix Systems",Ireland,2015,19
+Marketing Campaign Management,Ireland,2016,6
+Microsoft Application Development,Ireland,2015,14
+Middleware and Integration Software,Ireland,2015,4
+Middleware and Integration Software,Ireland,2016,8
+Mobile Development,Ireland,2015,8
+Mobile Development,Ireland,2016,9
+Network and Information Security,Ireland,2015,5
+Network and Information Security,Ireland,2016,4
+Perl/Python/Ruby,Ireland,2015,17
+Recruiting,Ireland,2015,16
+Recruiting,Ireland,2016,10
+SAP ERP Systems,Ireland,2015,15
+SEO/SEM Marketing,Ireland,2015,3
+SEO/SEM Marketing,Ireland,2016,5
+Shell Scripting Languages,Ireland,2015,25
+Software Modeling and Process Design,Ireland,2015,11
+Software Revision Control Systems,Ireland,2015,10
+Software Revision Control Systems,Ireland,2016,7
+Statistical Analysis and Data Mining,Ireland,2015,2
+Statistical Analysis and Data Mining,Ireland,2016,2
+User Interface Design,Ireland,2015,18
+Web Architecture and Development Framework,Ireland,2015,6
+Web Architecture and Development Framework,Ireland,2016,3
+Administrative and Office Management,Netherlands,2014,18
+Algorithm Design,Netherlands,2015,21
+Business Intelligence,Netherlands,2014,3
+Business Intelligence,Netherlands,2015,24
+C/C++,Netherlands,2014,11
+C/C++,Netherlands,2015,23
+Corporate Law and Governance,Netherlands,2015,9
+Data Engineering and Data Warehousing,Netherlands,2014,20
+Data Engineering and Data Warehousing,Netherlands,2015,3
+Data Engineering and Data Warehousing,Netherlands,2016,4
+Data Presentation,Netherlands,2014,15
+Data Presentation,Netherlands,2015,17
+Database Management and Software,Netherlands,2014,24
+Database Management and Software,Netherlands,2015,20
+Digital and Online Marketing,Netherlands,2014,16
+Economics,Netherlands,2014,17
+Economics,Netherlands,2015,18
+Electronic and Electrical Engineering,Netherlands,2014,23
+Electronic and Electrical Engineering,Netherlands,2015,4
+Game Development,Netherlands,2014,19
+HR Benefits and Compensation,Netherlands,2015,8
+Integrated Circuit (IC) Design,Netherlands,2014,22
+Java Development,Netherlands,2014,9
+Java Development,Netherlands,2015,5
+Java Development,Netherlands,2016,3
+"Mac, Linux and Unix Systems",Netherlands,2015,25
+Microsoft Application Development,Netherlands,2015,22
+Middleware and Integration Software,Netherlands,2014,21
+Middleware and Integration Software,Netherlands,2015,11
+Middleware and Integration Software,Netherlands,2016,10
+Mobile Development,Netherlands,2014,12
+Mobile Development,Netherlands,2015,6
+Mobile Development,Netherlands,2016,7
+Network and Information Security,Netherlands,2014,10
+Network and Information Security,Netherlands,2015,19
+Network and Information Security,Netherlands,2016,8
+Perl/Python/Ruby,Netherlands,2014,8
+Perl/Python/Ruby,Netherlands,2015,16
+Recruiting,Netherlands,2014,5
+Recruiting,Netherlands,2015,7
+Recruiting,Netherlands,2016,5
+Retail Store Operations,Netherlands,2015,13
+SAP ERP Systems,Netherlands,2014,25
+SEO/SEM Marketing,Netherlands,2014,2
+SEO/SEM Marketing,Netherlands,2015,2
+SEO/SEM Marketing,Netherlands,2016,2
+Social Media Marketing,Netherlands,2014,14
+Software Modeling and Process Design,Netherlands,2014,7
+Software Modeling and Process Design,Netherlands,2015,14
+Software Modeling and Process Design,Netherlands,2016,6
+Software QA and User Testing,Netherlands,2014,13
+Software QA and User Testing,Netherlands,2015,10
+Software QA and User Testing,Netherlands,2016,9
+Statistical Analysis and Data Mining,Netherlands,2014,1
+Statistical Analysis and Data Mining,Netherlands,2015,1
+Statistical Analysis and Data Mining,Netherlands,2016,1
+Storage Systems and Management,Netherlands,2014,4
+Storage Systems and Management,Netherlands,2015,12
+Web Architecture and Development Framework,Netherlands,2014,6
+Web Architecture and Development Framework,Netherlands,2015,15
+Algorithm Design,Singapore,2015,8
+Algorithm Design,Singapore,2016,7
+Channel Marketing,Singapore,2015,15
+Cloud and Distributed Computing,Singapore,2015,1
+Cloud and Distributed Computing,Singapore,2016,1
+Corporate Law and Governance,Singapore,2015,5
+Corporate Law and Governance,Singapore,2016,5
+Data Engineering and Data Warehousing,Singapore,2015,21
+Economics,Singapore,2015,16
+Electronic and Electrical Engineering,Singapore,2015,12
+Foreign Language Translation,Singapore,2015,10
+Foreign Language Translation,Singapore,2016,9
+Litigation,Singapore,2015,23
+"Mac, Linux and Unix Systems",Singapore,2015,25
+Marketing Campaign Management,Singapore,2015,6
+Marketing Campaign Management,Singapore,2016,6
+Mining and Commodities,Singapore,2015,19
+Mobile Development,Singapore,2015,17
+Network and Information Security,Singapore,2015,9
+Network and Information Security,Singapore,2016,8
+"Non-Profit, Fundraising, and Grantmaking",Singapore,2015,7
+Perl/Python/Ruby,Singapore,2015,13
+Public Policy and International Relations,Singapore,2015,4
+Public Policy and International Relations,Singapore,2016,3
+Radio Broadcasting,Singapore,2015,14
+Recruiting,Singapore,2015,24
+SEO/SEM Marketing,Singapore,2015,2
+SEO/SEM Marketing,Singapore,2016,2
+Social Media Marketing,Singapore,2015,20
+Statistical Analysis and Data Mining,Singapore,2015,3
+Statistical Analysis and Data Mining,Singapore,2016,4
+Storage Systems and Management,Singapore,2015,11
+Storage Systems and Management,Singapore,2016,10
+User Interface Design,Singapore,2015,18
+Web Architecture and Development Framework,Singapore,2015,22
+Business Intelligence,South Africa,2014,6
+Business Intelligence,South Africa,2015,15
+Clinical Research and Trials,South Africa,2014,23
+Corporate Law and Governance,South Africa,2015,12
+Data Engineering and Data Warehousing,South Africa,2014,14
+Data Engineering and Data Warehousing,South Africa,2015,16
+Database Management and Software,South Africa,2014,24
+Database Management and Software,South Africa,2015,17
+Digital and Online Marketing,South Africa,2014,21
+Digital and Online Marketing,South Africa,2015,24
+Economics,South Africa,2014,25
+Economics,South Africa,2015,25
+Electronic and Electrical Engineering,South Africa,2015,21
+Foreign Language Translation,South Africa,2015,19
+Java Development,South Africa,2014,5
+Java Development,South Africa,2015,2
+Java Development,South Africa,2016,2
+"Mac, Linux and Unix Systems",South Africa,2014,12
+"Mac, Linux and Unix Systems",South Africa,2015,9
+"Mac, Linux and Unix Systems",South Africa,2016,9
+Marketing Campaign Management,South Africa,2014,13
+Materials Engineering,South Africa,2014,16
+Materials Engineering,South Africa,2015,11
+Mathematics,South Africa,2015,23
+Microsoft Application Development,South Africa,2015,18
+Middleware and Integration Software,South Africa,2014,4
+Middleware and Integration Software,South Africa,2015,3
+Middleware and Integration Software,South Africa,2016,7
+Mobile Development,South Africa,2015,4
+Mobile Development,South Africa,2016,4
+Network and Information Security,South Africa,2014,3
+Network and Information Security,South Africa,2015,5
+Network and Information Security,South Africa,2016,3
+"Non-Profit, Fundraising, and Grantmaking",South Africa,2014,11
+"Oil and Gas, Subsea Engineering/Offshore Operations",South Africa,2014,22
+Perl/Python/Ruby,South Africa,2014,9
+Perl/Python/Ruby,South Africa,2015,7
+Perl/Python/Ruby,South Africa,2016,5
+PR and Communications,South Africa,2014,20
+Public Policy and International Relations,South Africa,2014,7
+Public Policy and International Relations,South Africa,2015,13
+Public Policy and International Relations,South Africa,2016,10
+Recruiting,South Africa,2014,18
+SAP ERP Systems,South Africa,2014,8
+SAP ERP Systems,South Africa,2015,20
+Social Media Marketing,South Africa,2014,17
+Social Media Marketing,South Africa,2015,22
+Software QA and User Testing,South Africa,2014,19
+Software QA and User Testing,South Africa,2015,14
+Statistical Analysis and Data Mining,South Africa,2014,1
+Statistical Analysis and Data Mining,South Africa,2015,1
+Statistical Analysis and Data Mining,South Africa,2016,1
+Storage Systems and Management,South Africa,2014,2
+Storage Systems and Management,South Africa,2015,6
+User Interface Design,South Africa,2014,10
+User Interface Design,South Africa,2015,10
+User Interface Design,South Africa,2016,6
+Web Architecture and Development Framework,South Africa,2014,15
+Web Architecture and Development Framework,South Africa,2015,8
+Web Architecture and Development Framework,South Africa,2016,8
+Algorithm Design,United Arab Emirates,2014,6
+Algorithm Design,United Arab Emirates,2015,3
+Algorithm Design,United Arab Emirates,2016,3
+C/C++,United Arab Emirates,2015,23
+Computer Graphics and Animation,United Arab Emirates,2014,23
+Corporate Law and Governance,United Arab Emirates,2014,12
+Corporate Law and Governance,United Arab Emirates,2015,16
+Corporate Law and Governance,United Arab Emirates,2016,10
+Data Engineering and Data Warehousing,United Arab Emirates,2014,14
+Data Engineering and Data Warehousing,United Arab Emirates,2015,25
+Database and Direct Marketing,United Arab Emirates,2014,24
+Digital and Online Marketing,United Arab Emirates,2014,18
+Digital and Online Marketing,United Arab Emirates,2015,22
+Financial Planning,United Arab Emirates,2014,9
+Financial Planning,United Arab Emirates,2015,5
+Foreign Language Translation,United Arab Emirates,2014,11
+Foreign Language Translation,United Arab Emirates,2015,8
+Home Improvement,United Arab Emirates,2015,19
+Java Development,United Arab Emirates,2014,20
+Java Development,United Arab Emirates,2015,11
+"Mac, Linux and Unix Systems",United Arab Emirates,2014,13
+Middleware and Integration Software,United Arab Emirates,2014,5
+Middleware and Integration Software,United Arab Emirates,2015,7
+Middleware and Integration Software,United Arab Emirates,2016,6
+Mining and Commodities,United Arab Emirates,2016,9
+Mobile Development,United Arab Emirates,2014,15
+Mobile Development,United Arab Emirates,2015,12
+Network and Information Security,United Arab Emirates,2014,7
+Network and Information Security,United Arab Emirates,2015,13
+PR and Communications,United Arab Emirates,2014,19
+PR and Communications,United Arab Emirates,2015,14
+Public Policy and International Relations,United Arab Emirates,2014,2
+Public Policy and International Relations,United Arab Emirates,2015,2
+Public Policy and International Relations,United Arab Emirates,2016,2
+Real Estate Rental,United Arab Emirates,2015,15
+Recruiting,United Arab Emirates,2014,8
+Recruiting,United Arab Emirates,2015,18
+Renewable and Sustainable Energy,United Arab Emirates,2016,8
+SEO/SEM Marketing,United Arab Emirates,2014,4
+SEO/SEM Marketing,United Arab Emirates,2015,4
+SEO/SEM Marketing,United Arab Emirates,2016,5
+Social Media Marketing,United Arab Emirates,2014,17
+Social Media Marketing,United Arab Emirates,2015,20
+Software Modeling and Process Design,United Arab Emirates,2014,25
+Software Modeling and Process Design,United Arab Emirates,2015,24
+Software QA and User Testing,United Arab Emirates,2014,21
+Software QA and User Testing,United Arab Emirates,2015,21
+Statistical Analysis and Data Mining,United Arab Emirates,2014,1
+Statistical Analysis and Data Mining,United Arab Emirates,2015,1
+Statistical Analysis and Data Mining,United Arab Emirates,2016,1
+Storage Systems and Management,United Arab Emirates,2014,3
+Storage Systems and Management,United Arab Emirates,2015,10
+User Interface Design,United Arab Emirates,2014,16
+User Interface Design,United Arab Emirates,2015,9
+User Interface Design,United Arab Emirates,2016,7
+Web Architecture and Development Framework,United Arab Emirates,2014,10
+Web Architecture and Development Framework,United Arab Emirates,2015,6
+Web Architecture and Development Framework,United Arab Emirates,2016,4
+Writing and Publishing,United Arab Emirates,2014,22
+Writing and Publishing,United Arab Emirates,2015,17
+Algorithm Design,United Kingdom,2014,15
+Algorithm Design,United Kingdom,2015,10
+Business Intelligence,United Kingdom,2014,3
+Business Intelligence,United Kingdom,2015,22
+C/C++,United Kingdom,2014,14
+Corporate Law and Governance,United Kingdom,2014,18
+Corporate Law and Governance,United Kingdom,2015,8
+Data Engineering and Data Warehousing,United Kingdom,2014,21
+Data Engineering and Data Warehousing,United Kingdom,2015,9
+Data Engineering and Data Warehousing,United Kingdom,2016,10
+Data Presentation,United Kingdom,2014,11
+Data Presentation,United Kingdom,2015,7
+Data Presentation,United Kingdom,2016,9
+Database Management and Software,United Kingdom,2014,22
+Database Management and Software,United Kingdom,2015,16
+Economics,United Kingdom,2014,20
+Foreign Language Translation,United Kingdom,2014,9
+HR Benefits and Compensation,United Kingdom,2015,21
+HR Benefits and Compensation,United Kingdom,2016,3
+Integrated Circuit (IC) Design,United Kingdom,2014,16
+Integrated Circuit (IC) Design,United Kingdom,2015,25
+Java Development,United Kingdom,2014,10
+Java Development,United Kingdom,2015,5
+"Mac, Linux and Unix Systems",United Kingdom,2015,17
+Marketing Campaign Management,United Kingdom,2014,24
+Marketing Campaign Management,United Kingdom,2015,18
+Middleware and Integration Software,United Kingdom,2014,2
+Middleware and Integration Software,United Kingdom,2015,2
+Middleware and Integration Software,United Kingdom,2016,2
+Mining and Commodities,United Kingdom,2014,23
+Mining and Commodities,United Kingdom,2015,24
+Mobile Development,United Kingdom,2014,6
+Mobile Development,United Kingdom,2015,6
+Mobile Development,United Kingdom,2016,5
+Network and Information Security,United Kingdom,2014,7
+Network and Information Security,United Kingdom,2015,13
+Network and Information Security,United Kingdom,2016,8
+Perl/Python/Ruby,United Kingdom,2014,5
+Perl/Python/Ruby,United Kingdom,2015,12
+Perl/Python/Ruby,United Kingdom,2016,6
+Public Policy and International Relations,United Kingdom,2014,13
+Public Policy and International Relations,United Kingdom,2015,23
+Recruiting,United Kingdom,2014,17
+SAP ERP Systems,United Kingdom,2014,19
+SAP ERP Systems,United Kingdom,2015,14
+SEO/SEM Marketing,United Kingdom,2014,8
+SEO/SEM Marketing,United Kingdom,2015,4
+SEO/SEM Marketing,United Kingdom,2016,7
+Shell Scripting Languages,United Kingdom,2015,20
+Software QA and User Testing,United Kingdom,2015,15
+Statistical Analysis and Data Mining,United Kingdom,2014,1
+Statistical Analysis and Data Mining,United Kingdom,2015,1
+Statistical Analysis and Data Mining,United Kingdom,2016,1
+Storage Systems and Management,United Kingdom,2014,4
+Storage Systems and Management,United Kingdom,2015,11
+User Interface Design,United Kingdom,2014,25
+User Interface Design,United Kingdom,2015,19
+Web Architecture and Development Framework,United Kingdom,2014,12
+Web Architecture and Development Framework,United Kingdom,2015,3
+Web Architecture and Development Framework,United Kingdom,2016,4
+Algorithm Design,United States,2014,11
+Algorithm Design,United States,2015,8
+Algorithm Design,United States,2016,9
+Business Intelligence,United States,2014,21
+Business Intelligence,United States,2015,23
+C/C++,United States,2015,22
+Cloud and Distributed Computing,United States,2014,1
+Cloud and Distributed Computing,United States,2015,1
+Cloud and Distributed Computing,United States,2016,1
+Computer Graphics and Animation,United States,2014,13
+Computer Graphics and Animation,United States,2015,25
+Data Engineering and Data Warehousing,United States,2014,14
+Data Engineering and Data Warehousing,United States,2015,15
+Digital and Online Marketing,United States,2014,12
+Economics,United States,2014,18
+Economics,United States,2015,20
+Electronic and Electrical Engineering,United States,2014,23
+Electronic and Electrical Engineering,United States,2015,16
+Foreign Language Translation,United States,2014,6
+Foreign Language Translation,United States,2015,21
+Game Development,United States,2014,24
+Java Development,United States,2014,9
+Java Development,United States,2015,9
+Java Development,United States,2016,10
+"Mac, Linux and Unix Systems",United States,2014,8
+"Mac, Linux and Unix Systems",United States,2015,11
+Marketing Campaign Management,United States,2014,19
+Marketing Campaign Management,United States,2015,12
+Microsoft Application Development,United States,2015,24
+Middleware and Integration Software,United States,2014,3
+Middleware and Integration Software,United States,2015,5
+Middleware and Integration Software,United States,2016,7
+Mobile Development,United States,2014,5
+Mobile Development,United States,2015,3
+Mobile Development,United States,2016,3
+Network and Information Security,United States,2014,4
+Network and Information Security,United States,2015,4
+Network and Information Security,United States,2016,6
+Perl/Python/Ruby,United States,2014,10
+Perl/Python/Ruby,United States,2015,13
+SAP ERP Systems,United States,2014,25
+SAP ERP Systems,United States,2015,19
+Shell Scripting Languages,United States,2014,20
+Shell Scripting Languages,United States,2015,14
+Software QA and User Testing,United States,2014,15
+Software QA and User Testing,United States,2015,18
+Statistical Analysis and Data Mining,United States,2014,2
+Statistical Analysis and Data Mining,United States,2015,2
+Statistical Analysis and Data Mining,United States,2016,2
+Storage Systems and Management,United States,2014,7
+Storage Systems and Management,United States,2015,6
+Storage Systems and Management,United States,2016,4
+User Interface Design,United States,2014,16
+User Interface Design,United States,2015,7
+User Interface Design,United States,2016,5
+Virtualization,United States,2014,22
+Virtualization,United States,2015,17
+Web Architecture and Development Framework,United States,2014,17
+Web Architecture and Development Framework,United States,2015,10
+Web Architecture and Development Framework,United States,2016,8
