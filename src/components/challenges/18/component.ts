@@ -18,19 +18,11 @@ function controller(csvService: ICsvService) {
         left: 80,
         right: 30
     };
- 
+
     const fileName = 'components/challenges/18/data/data.csv';
     csvService.read<any>(fileName, update);
 
     function update(data: IData) {
-        let stratified = d3.stratify<any>()
-            .id(d => d.card)
-            .parentId(d => d.ferry)
-            (data);
-        console.log(stratified);
-
-
-
 
         let spliced = data
             .columns
@@ -48,19 +40,25 @@ function controller(csvService: ICsvService) {
                     }
                 });
                 return {
-                    card: v.card,
-                    values:val
+                    key: v.card,
+                    values: val
                 }
             });
             return {
                 key: d.key,
                 values: values
-            } 
-        })
-        console.log(mapped)
+            }
+        });
+        console.log(mapped);
+        var root = {
+            key: 'Ferries', values: mapped
+        };
+        let hierarchy = d3.hierarchy<any>(root, d => d.values);
+        console
+            .log(hierarchy);
     };
 }
 
-interface IData extends Array<any>{
+interface IData extends Array<any> {
     columns: Array<string>;
 }
