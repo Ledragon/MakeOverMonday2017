@@ -1,38 +1,38 @@
 {
-  "name": "make-over-monday-spa",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "watch": "webpack --watch",
-    "serve": "live-server src",
-    "start": "npm-run-all --parallel serve watch"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@types/moment": "^2.13.0",
-    "angular": "^1.6.0",
-    "angular-ui-router": "^0.3.2",
-    "d3": "^4.5.0",
-    "d3-scale-chromatic": "^1.1.0",
-    "lodash": "^4.17.2",
-    "moment": "^2.17.1"
-  },
-  "devDependencies": {
-    "@types/angular": "^1.5.21",
-    "@types/angular-ui-router": "^1.1.35",
-    "@types/d3": "^4.4.0",
-    "@types/d3-scale-chromatic": "^1.0.1",
-    "@types/lodash": "^4.14.44",
-    "concurrently": "^3.1.0",
-    "gulp": "^3.9.1",
-    "live-server": "^1.1.0",
-    "npm-run-all": "^4.0.1",
-    "ts-loader": "^1.3.1",
-    "typescript": "^2.1.4",
-    "webpack": "^1.14.0",
-    "webpack-dev-server": "^1.16.2"
-  }
+    "name": "make-over-monday-spa",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "watch": "webpack --watch",
+        "serve": "live-server src --ignore=**/*.ts",
+        "start": "npm-run-all --parallel serve watch"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@types/moment": "^2.13.0",
+        "angular": "^1.6.0",
+        "angular-ui-router": "^0.3.2",
+        "d3": "^4.5.0",
+        "d3-scale-chromatic": "^1.1.0",
+        "lodash": "^4.17.2",
+        "moment": "^2.17.1"
+    },
+    "devDependencies": {
+        "@types/angular": "^1.5.21",
+        "@types/angular-ui-router": "^1.1.35",
+        "@types/d3": "^4.4.0",
+        "@types/d3-scale-chromatic": "^1.0.1",
+        "@types/lodash": "^4.14.44",
+        "concurrently": "^3.1.0",
+        "gulp": "^3.9.1",
+        "live-server": "^1.1.0",
+        "npm-run-all": "^4.0.1",
+        "ts-loader": "^1.3.1",
+        "typescript": "^2.1.4",
+        "webpack": "^1.14.0",
+        "webpack-dev-server": "^1.16.2"
+    }
 }
