@@ -1,5 +1,9 @@
-text.bar-label{
+text.bar-label {
     text-anchor: end;
-    dominant-baseline : central;
+    dominant-baseline: central;
     font-size: .6em;
+}
+
+.year-series path {
+    fill: none;
 }
