@@ -193,6 +193,10 @@ ui-view, :host, .flex-container{
 .mom-09{
     overflow:  hidden;
 }
+#mom18{
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
 .found{
     fill: red;
 }

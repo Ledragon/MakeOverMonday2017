@@ -11,17 +11,12 @@ export var mom18 = {
 }
 
 function controller(csvService: ICsvService) {
-    const width = 1800;
-    const height = 480;
+    const width = 900;
+    const height = 240;
     let colorScale = d3.scaleOrdinal<string, string>()
         .range(d3.schemeCategory20);
 
-    var chart = new CategoricalLinearChart<any>('#chart', width, height)
-        .color((d, i) => d3.schemeCategory20[i])
-        .curve('line')
-        .x(d => d.date)
-        .y(d => d.value)
-        .groupBy(d => d.ferry);
+
     const fileName = 'components/challenges/18/data/data.csv';
     csvService.read<any>(fileName, update);
 
@@ -45,8 +40,19 @@ function controller(csvService: ICsvService) {
         let byCard = d3.nest<any>()
             .key(d => d.card)
             .entries(flattened);
-        chart.title(byCard[0].key)
-            .update(byCard[0].values);
+        byCard.forEach((c, i) => {
+            d3.select('#mom18')
+                .append('div')
+                .attr('id', 'chart' + i);
+            new CategoricalLinearChart<any>('#chart' + i, width, height)
+                .color((d, i) => d3.schemeCategory20[i])
+                .curve('line')
+                .x(d => d.date)
+                .y(d => d.value)
+                .groupBy(d => d.ferry)
+                .title('Card: ' + c.key)
+                .update(c.values);
+        })
     };
 }
 
