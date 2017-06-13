@@ -5,7 +5,7 @@ var mom19State = {
     template: '<mom19 class=\"flex-container\"></mom19>',
     url: '/mom19',
     data: {
-        description: ''
+        description: 'Which cars do the Dutch purchase?'
     }
 };
 
