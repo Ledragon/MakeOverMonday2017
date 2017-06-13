@@ -40,7 +40,7 @@ function controller(csvService: ICsvService) {
         let bySkill = d3.nest<IFormat>()
             .key(d => d.skill)
             .entries(all);
-        console.log('by skill', bySkill.length);
+        console.log(bySkill.length);
 
         let global = all.filter(d => d.country === 'Global')
             .filter(d => d.year === 2015)
