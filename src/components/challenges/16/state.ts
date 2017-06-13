@@ -5,7 +5,7 @@ var mom16State = {
     template: '<mom16 class=\"flex-container\"></mom16>',
     url: '/mom16',
     data: {
-        description: ''
+        description: 'Medicine statistics: GP prescribing by constituency, 2015'
     }
 };
 
