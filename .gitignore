@@ -51,4 +51,3 @@ src/data/build
 typings
 dist
 !webpack.config.js
-*.twbx
