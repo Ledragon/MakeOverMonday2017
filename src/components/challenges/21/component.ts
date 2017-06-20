@@ -1,6 +1,6 @@
 import * as d3 from 'd3';
-import * as plot from '../../charting/plotFactory';
-import { ICsvService } from '../../services/csvService';
+// import * as plot from '../../charting/plotFactory';
+import { ICsvService } from '../../../services/csvService';
 
 export var mom21 = {
     name: 'mom21',
@@ -20,10 +20,10 @@ function controller(csvService: ICsvService) {
         right: 30
     };
 
-    let p = plot.plot('#chart', width, height, plotMargins);
-    let plotGroup = p.group();
-    let plotHeight = p.height();
-    let plotWidth = p.width();
+    // let p = plot.plot('#chart', width, height, plotMargins);
+    // let plotGroup = p.group();
+    // let plotHeight = p.height();
+    // let plotWidth = p.width();
 
     
     const fileName = 'components/challenges/21/data/data.csv';

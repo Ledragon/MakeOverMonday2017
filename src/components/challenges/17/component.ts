@@ -28,24 +28,35 @@ function controller(csvService: ICsvService) {
                     country: d.Country
                 };
             });
-        let byYear = d3.nest<IFormat>()
-            .key(d => d.year.toString())
-            .entries(all);
-        console.log(byYear.length)
+        // let byYear = d3.nest<IFormat>()
+        //     .key(d => d.year.toString())
+        //     .entries(all);
+        // console.log(byYear.length)
 
-        let bySountry = d3.nest<IFormat>()
+        let byCountry = d3.nest<IFormat>()
             .key(d => d.country)
             .entries(all);
-        console.log(bySountry.length);
-        let bySkill = d3.nest<IFormat>()
-            .key(d => d.skill)
-            .entries(all);
-        console.log('by skill', bySkill.length);
+        console.log(byCountry.length);
+        d3.select('#country')
+            .on('change', function(d){
+                var value = d3.select(this).property('value');
+                console.log(value);
+            })
+            .selectAll('option')
+            .data(byCountry)
+            .enter()
+            .append('option')
+            .attr('value', d => d.key)
+            .text(d => d.key);
+        // let bySkill = d3.nest<IFormat>()
+        //     .key(d => d.skill)
+        //     .entries(all);
+        // console.log('by skill', bySkill.length);
 
-        let global = all.filter(d => d.country === 'Global')
-            .filter(d => d.year === 2015)
-            .sort((a, b) => a.rank - b.rank);
-        console.log(global)
+        // let global = all.filter(d => d.country === 'Global')
+        //     .filter(d => d.year === 2015)
+        //     .sort((a, b) => a.rank - b.rank);
+        // console.log(global)
     };
 }
 
