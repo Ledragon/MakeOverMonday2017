@@ -41,14 +41,14 @@ jspm_packages
 .node_repl_history
 
 **/*.js.map
-# *.xlsx
+*.xlsx
 **/*.js
 !**/config.js
 merge.bat
 merge.ps1
 src/data/build
-# *.log
+*.log
 typings
 dist
 !webpack.config.js
-# *.twbx
+*.twbx
